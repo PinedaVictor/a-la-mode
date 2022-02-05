@@ -1,20 +1,10 @@
-import { useState } from "react";
-
-// import { Logo } from "./assets/vectors";
+import React from "react";
 import "./styles/App.css";
 
-document.getElementById;
-function App() {
-  const [count, setCount] = useState(0);
-
+export const App: React.FC = () => {
   return (
-    <div className="App bg-black">
-      <header className="">
-        <p>Dreamlike using VITE</p>
-        {/* <Logo width={"3rem"} height={"3rem"} /> */}
-      </header>
-    </div>
+    <>
+      <p>Dreamlike using vite</p>
+    </>
   );
-}
-
-export default App;
+};

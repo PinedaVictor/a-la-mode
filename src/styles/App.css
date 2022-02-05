@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "BAYER";
+  src: url("../assets/fonts/Bayer.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tommy";
+  src: url("../assets/fonts/Tommy.otf") format("opentype");
+}
+@font-face {
+  font-family: "Marksman";
+  src: url("../assets/fonts/MARKSMAN.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Torque";
+  src: url("../assets/fonts/TorqueSense.otf") format("opentype");
+}
