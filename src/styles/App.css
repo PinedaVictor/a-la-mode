@@ -18,3 +18,7 @@
   font-family: "Torque";
   src: url("../assets/fonts/TorqueSense.otf") format("opentype");
 }
+
+body {
+  overflow-x: hidden;
+}
