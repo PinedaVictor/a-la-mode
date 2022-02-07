@@ -10,6 +10,7 @@ module.exports = {
       offBlack: "#1b1b1b",
       yellow: "#e6a902",
       tan: "#d9cab8",
+      offWhite: "#ebf2fa",
     },
   },
   plugins: [],

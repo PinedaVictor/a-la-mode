@@ -59,7 +59,7 @@ export const ImageCarousel: React.FC = () => {
   return (
     <>
       <div className=" h-full w-full">
-        <button onClick={cycleArray}>click</button>
+        {/* <button onClick={cycleArray}>click</button> */}
         {/* TODO: Animate text for each image */}
         <div className=" absolute z-10 bg-tan">
           <p>The text</p>

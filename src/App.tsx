@@ -8,6 +8,7 @@ export const App: React.FC = () => {
     <>
       <Header />
       <Hero />
+      <div className=" h-[50rem]"></div>
     </>
   );
 };
