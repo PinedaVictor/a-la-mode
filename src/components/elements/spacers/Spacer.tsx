@@ -7,7 +7,7 @@ interface SpacerProps {
 export const Spacer: React.FC<SpacerProps> = (props) => {
   return (
     <>
-      <div className={`h-[${props.height}] bg-offWhite w-screen`}>
+      <div className={`h-[${props.height}] bg-offWhite w-screen p-5`}>
         {props.children}
       </div>
     </>
