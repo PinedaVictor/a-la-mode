@@ -67,7 +67,7 @@ export const ImageCarousel: React.FC = () => {
         {transitions((styles, item) => (
           <animated.div
             className="h-full w-full absolute"
-            style={styles}
+            style={{ ...styles, touchAction: "pan-x" }}
             {...bind()}
           >
             <picture>
