@@ -8,6 +8,9 @@ export const Quote: React.FC = () => {
   // TODO: How would we pass multiple quotes to this component?
   // TODO: How would we apply different styles to each item in the quotes array?
   // TODO: Would height also depend on the text size?
+
+  // TODO: Abstract out quote text and quote should get children props
+  // TODO: Also fix animation
   const quotes = [
     "Photography is the transition of reality",
     "into a readable image.",
@@ -17,16 +20,16 @@ export const Quote: React.FC = () => {
   const trails = useTrail(quotes.length, {
     config: { mass: 5, tension: 2000, friction: 400 },
     opacity: animate ? 1 : 0,
-    x: animate ? 0 : -20,
+    y: animate ? 0 : -20,
     height: animate ? 240 : 0,
-    from: { opacity: 0, x: 30, height: 0 },
+    from: { opacity: 0, y: 30, height: 0 },
   });
 
   return (
     <>
       <div
         id="quote"
-        className="text-offBlack text-6xl font-[Tommy] bg-yellow h-full"
+        className="text-offBlack text-5xl font-[Tommy] bg-yellow h-full"
         onClick={() => setAnimate(!animate)}
       >
         {trails.map((props, index) => (
