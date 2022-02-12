@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDrag } from "@use-gesture/react";
 import { useTransition, animated } from "react-spring";
 
@@ -6,15 +6,23 @@ import img1 from "../../../assets/images/idk.png";
 import img2 from "../../../assets/images/yes.jpg";
 
 const imageData = [img1, img2];
+const images = [
+  {
+    image: img1,
+    text: "Digital Authenticity",
+  },
+  {
+    image: img2,
+    text: "Something new, something unique",
+  },
+];
 
 export const ImageCarousel: React.FC = () => {
   const [imgCount, setImgCount] = useState(0);
 
-  // TODO: Animate text for each image in the carousel
-  // TODO: Place cycleArray function in useEffect to cycle through images
+  // TODO: Add arrows and/or circles to show user where they are in the carousel
 
-  const cycleArray = (event: any) => {
-    event.preventDefault();
+  const cycleArray = () => {
     setImgCount((prevState) => {
       const currentCount = prevState;
       const addOne = currentCount + 1;
@@ -49,35 +57,50 @@ export const ImageCarousel: React.FC = () => {
     }
   });
 
+  useEffect(() => {
+    setTimeout(() => {
+      cycleArray();
+    }, 3000);
+  }, [imgCount]);
+
   const transitions = useTransition(imgCount, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
     delay: 200,
+    config: { friction: 80 },
   });
 
   return (
     <>
       <div className=" h-full w-full">
-        {/* <button onClick={cycleArray}>click</button> */}
-        {/* TODO: Animate text for each image */}
-        <div className=" absolute z-10 bg-tan">
-          <p>The text</p>
-        </div>
         {transitions((styles, item) => (
-          <animated.div
-            className="h-full w-full absolute"
-            style={{ ...styles, touchAction: "pan-x" }}
-            {...bind()}
-          >
-            <picture>
-              <img
-                src={imageData[item]}
-                alt="Make sure alt text is in data"
-                className="object-cover h-full w-full"
-              />
-            </picture>
-          </animated.div>
+          <>
+            <animated.div
+              className="h-full w-full absolute"
+              style={{ ...styles, touchAction: "pan-x" }}
+              {...bind()}
+            >
+              <animated.div
+                style={styles}
+                className=" absolute z-10 p-5 w-[25%]"
+              >
+                <div className=" inline-block bg-yellow font-[Tommy] translate-y-[25%] w-28 text-5xl">
+                  <p className=" bg-offBlack w-full text-offWhite">
+                    {images[item].text}
+                  </p>
+                </div>
+              </animated.div>
+              <picture>
+                <img
+                  src={images[item].image}
+                  // TODO: Alt text in data object
+                  alt="Make sure alt text is in data"
+                  className="object-cover h-full w-full"
+                />
+              </picture>
+            </animated.div>
+          </>
         ))}
       </div>
     </>
