@@ -9,8 +9,12 @@ export const App: React.FC = () => {
   return (
     <>
       <Header />
-      <Spacer height="35rem">
-        <Quote />
+      <Spacer height="30rem">
+        <Quote>
+          <p>Design</p>
+          <p>{"Web Apps"}</p>
+          <p>Branding</p>
+        </Quote>
       </Spacer>
       <Hero />
       <div className=" h-[50rem] bg-offWhite"></div>
