@@ -57,18 +57,19 @@ export const ImageCarousel: React.FC = () => {
     }
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      cycleArray();
-    }, 3000);
-  }, [imgCount]);
+  // FIXME: This is affecting gestures
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     cycleArray();
+  //   }, 3000);
+  // }, [imgCount]);
 
   const transitions = useTransition(imgCount, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
     delay: 200,
-    config: { friction: 80 },
+    config: { friction: 80, mass: 5 },
   });
 
   return (

@@ -11,6 +11,7 @@ module.exports = {
       yellow: "#e6a902",
       tan: "#d9cab8",
       offWhite: "#ebf2fa",
+      satBlack: "#000000",
     },
   },
   plugins: [],

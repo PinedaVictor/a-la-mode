@@ -20,8 +20,13 @@ export const App: React.FC = () => {
         </Quote>
       </Spacer>
       <Hero />
+      <Spacer height="2rem">
+        <Quote>
+          <p className=" p-5 text-offBlack">Creative Approach</p>
+        </Quote>
+      </Spacer>
       <Services />
-      <div className=" h-[50rem] bg-offWhite"></div>
+      <div className=" h-[5rem] bg-satBlack" />
     </>
   );
 };

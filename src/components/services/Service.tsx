@@ -1,9 +1,17 @@
 import React from "react";
 
-export const Service: React.FC = () => {
+interface ServiceProps {
+  serviceNumber: number;
+  summary: string;
+}
+
+export const Service: React.FC<ServiceProps> = (props) => {
   return (
     <>
-      <div className=" bg-yellow h-[30rem] border-2">The service</div>
+      <div className=" bg-offWhite p-5">
+        <p className=" text-4xl font-[Tommy]">0{props.serviceNumber}</p>
+        <p>{props.summary}</p>
+      </div>
     </>
   );
 };
