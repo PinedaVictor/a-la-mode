@@ -8,11 +8,11 @@ import img2 from "../../../assets/images/yes.jpg";
 const imageData = [img1, img2];
 const images = [
   {
-    image: img1,
+    image: imageData[0],
     text: "Digital Authenticity",
   },
   {
-    image: img2,
+    image: imageData[1],
     text: "Something new, something unique",
   },
 ];
@@ -21,7 +21,7 @@ export const ImageCarousel: React.FC = () => {
   const [imgCount, setImgCount] = useState(0);
 
   // TODO: Add arrows and/or circles to show user where they are in the carousel
-
+  // FIXME: May not need this function - try placing it within the useEffect function
   const cycleArray = () => {
     setImgCount((prevState) => {
       const currentCount = prevState;
@@ -58,11 +58,13 @@ export const ImageCarousel: React.FC = () => {
   });
 
   // FIXME: This is affecting gestures
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     cycleArray();
-  //   }, 3000);
-  // }, [imgCount]);
+  // TODO: Something even better, implament TicTak inspired menu - Use original SVGs
+  useEffect(() => {
+    setTimeout(() => {
+      cycleArray();
+      // bind();
+    }, 3000);
+  }, [imgCount]);
 
   const transitions = useTransition(imgCount, {
     from: { opacity: 0 },
@@ -92,6 +94,13 @@ export const ImageCarousel: React.FC = () => {
                   </p>
                 </div>
               </animated.div>
+              <div className="absolute bg-yellow right-1 bottom-14">
+                {/* TODO: SVG icons and data */}
+                <div>Icon 1</div>
+                <div>Icon 2</div>
+                <div>Icon 3</div>
+                <div>Icon 4</div>
+              </div>
               <picture>
                 <img
                   src={images[item].image}

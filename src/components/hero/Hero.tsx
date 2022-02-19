@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageCarousel } from "../elements/image-carousel/ImageCarousel";
+import { ImageCarousel } from "../elements/pixels/ImageCarousel";
 export const Hero: React.FC = () => {
   return (
     <>
