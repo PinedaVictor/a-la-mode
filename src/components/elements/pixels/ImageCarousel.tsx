@@ -102,6 +102,7 @@ export const ImageCarousel: React.FC = () => {
                 <div>Icon 4</div>
               </div>
               <picture>
+                <source type="image/webp" srcSet={images[item].image} />
                 <img
                   src={images[item].image}
                   // TODO: Alt text in data object

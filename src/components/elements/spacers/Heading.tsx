@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTrail, animated } from "react-spring";
 
-export const Quote: React.FC = (props) => {
+export const Heading: React.FC = (props) => {
   const quotes = React.Children.toArray(props.children);
   const [animate, setAnimate] = useState(true);
 
@@ -22,7 +22,6 @@ export const Quote: React.FC = (props) => {
         <div className="text-left inline-block align-middle h-full  pb-32 pt-10">
           {trails.map((props, index) => (
             <animated.div
-              className="yes"
               style={{
                 ...props,
                 overflowWrap: "break-word",
