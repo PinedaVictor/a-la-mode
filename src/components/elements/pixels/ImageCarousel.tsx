@@ -76,7 +76,7 @@ export const ImageCarousel: React.FC = () => {
 
   return (
     <>
-      <div className=" h-full w-full">
+      <section className=" h-full w-full">
         {transitions((styles, item) => (
           <>
             <animated.div
@@ -113,7 +113,7 @@ export const ImageCarousel: React.FC = () => {
             </animated.div>
           </>
         ))}
-      </div>
+      </section>
     </>
   );
 };

@@ -11,7 +11,7 @@ import img4 from "../../../assets/images/ph.png";
 export const ImageGrid: React.FC = () => {
   return (
     <>
-      <div className="grid md:grid-cols-3 w-screen bg-yellow">
+      <section className="grid md:grid-cols-3 w-screen bg-yellow">
         <div className=" md:col-span-2">
           <picture>
             <source type="image/webp" srcSet={img1} />
@@ -48,7 +48,7 @@ export const ImageGrid: React.FC = () => {
             <img src={img4} alt="" />
           </picture>
         </div>
-      </div>
+      </section>
     </>
   );
 };

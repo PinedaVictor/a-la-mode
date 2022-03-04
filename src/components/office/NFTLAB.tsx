@@ -13,11 +13,11 @@ export const NFTLAB: React.FC = () => {
             <img src={img1} alt="" />
           </picture>
         </div>
-        <div className=" bg-yellow text-6xl font-[Tommy] p-5">
-          <ul>
-            <p>10,000 NFT collection</p>
-            <p>Art guidence</p>
-            <p>For more info visit ThatNFT.io</p>
+        <div className=" bg-yellow text-5xl font-[Tommy] p-5">
+          <ul className=" ">
+            <li>10,000 NFT Collection</li>
+            <li>Art Generation</li>
+            <li>Concept development</li>
           </ul>
         </div>
       </section>

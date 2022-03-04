@@ -1,10 +1,8 @@
-import React from "react";
 import "./styles/App.css";
-import { Header } from "./components/header/Header";
-import { Hero } from "./components/hero/Hero";
+import React from "react";
+import { Header, Hero, Footer } from "./components";
 import { Spacer, Heading, ImageGrid, Quotes } from "./components/elements";
-import { Services } from "./components/services/Services";
-import { NFTLAB } from "./components/services/NFTLAB";
+import { Services, NFTLAB } from "./components/office";
 
 export const App: React.FC = () => {
   return (
@@ -36,6 +34,7 @@ export const App: React.FC = () => {
       <NFTLAB />
       <div className=" h-[5rem] bg-satBlack" />
       <Quotes />
+      <Footer />
     </>
   );
 };

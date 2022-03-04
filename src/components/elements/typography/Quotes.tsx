@@ -30,20 +30,22 @@ export const Quotes: React.FC = () => {
 
   return (
     <>
-      <div className=" bg-satBlack h-80">
-        {transitions((style, item) => (
-          <animated.div style={style} className=" absolute ">
-            <p className="text-offWhite font-[BebasNeue] text-6xl p-5 md:text-9xl">
-              {quotes[item]}
-            </p>
-          </animated.div>
-        ))}
-      </div>
-      <div className=" bg-yellow">
-        <button className=" bg-tan float-right" onClick={cycleArray}>
-          {"->"}
-        </button>
-      </div>
+      <section>
+        <div className=" bg-satBlack h-80">
+          {transitions((style, item) => (
+            <animated.div style={style} className=" absolute ">
+              <p className="text-offWhite font-[BebasNeue] text-6xl p-5 md:text-9xl">
+                {quotes[item]}
+              </p>
+            </animated.div>
+          ))}
+        </div>
+        <div className=" bg-yellow">
+          <button className=" bg-tan float-right" onClick={cycleArray}>
+            {"->"}
+          </button>
+        </div>
+      </section>
     </>
   );
 };
