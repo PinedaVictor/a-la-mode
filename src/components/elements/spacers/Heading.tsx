@@ -15,7 +15,7 @@ export const Heading: React.FC = (props) => {
 
   return (
     <>
-      <div
+      <section
         className="text-offBlack text-7xl font-[Tommy] h-full w-full text-center lg:text-8xl sm:text-6xl"
         onClick={() => setAnimate(!animate)}
       >
@@ -32,7 +32,7 @@ export const Heading: React.FC = (props) => {
             </animated.div>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 };

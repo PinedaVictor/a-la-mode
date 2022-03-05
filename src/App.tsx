@@ -1,13 +1,15 @@
 import "./styles/App.css";
-import React from "react";
-import { Header, Hero, Footer } from "./components";
+import React, { useState } from "react";
+import { Header, Hero, Footer, Drawer } from "./components";
 import { Spacer, Heading, ImageGrid, Quotes } from "./components/elements";
 import { Services, NFTLAB } from "./components/office";
 
 export const App: React.FC = () => {
+  const [menuOpen, toggleMenu] = useState(false);
   return (
     <>
-      <Header />
+      <Drawer isOpen={menuOpen} toggle={() => toggleMenu(!menuOpen)} />
+      <Header toggle={() => toggleMenu(!menuOpen)} />
       <Spacer>
         <Heading>
           {/* <p>Design</p> */}

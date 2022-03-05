@@ -2,10 +2,13 @@ import React from "react";
 import ig from "../../assets/icons/ig.svg";
 import twitter from "../../assets/icons/twitter.svg";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  toggle: () => void;
+}
+export const Header: React.FC<HeaderProps> = (props) => {
   return (
     <>
-      <header className="bg-offWhite w-screen h-14 sticky top-0 z-50">
+      <header className="bg-offWhite w-screen h-14 sticky top-0 z-40 ">
         <div className=" absolute left-0 flex pl-2">
           {/* TODO: Add links to social media links */}
           <picture>
@@ -18,9 +21,12 @@ export const Header: React.FC = () => {
           </picture>
         </div>
         {/* TODO: Menu and menu icon (svg) */}
-        {/* <div className="flex flex-row right-0 absolute bg-yellow">
+        <div
+          className="flex flex-row right-0 absolute bg-yellow"
+          onClick={props.toggle}
+        >
           <div>Menu option</div>
-        </div> */}
+        </div>
       </header>
     </>
   );
