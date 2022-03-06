@@ -1,5 +1,6 @@
 import React from "react";
 import { animated, useTransition } from "react-spring";
+import { Link } from "react-router-dom";
 
 interface DrawerProps {
   toggle: () => void;
@@ -34,7 +35,9 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
                 <ul className=" font-[Tommy] text-offWhite text-6xl p-5">
                   <li className=" pb-3">Home</li>
                   <li className=" pb-3">Web Apps</li>
-                  <li className=" pb-3">Happy Clients</li>
+                  <Link to="/HappyClients">
+                    <li className=" pb-3">Happy Clients</li>
+                  </Link>
                 </ul>
               </nav>
             </animated.div>
