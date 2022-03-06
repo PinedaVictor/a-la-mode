@@ -12,6 +12,7 @@ module.exports = {
       tan: "#d9cab8",
       offWhite: "#ebf2fa",
       satBlack: "#000000",
+      orange: "#ec4826",
     },
   },
   plugins: [],

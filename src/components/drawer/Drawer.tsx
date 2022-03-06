@@ -12,9 +12,6 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
     },
     enter: {
       opacity: 1,
-      backgroundColor: "red",
-      height: "100%",
-      width: "100%",
     },
     leave: {
       opacity: 0,
@@ -28,8 +25,18 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
       {fullScreenMenu(
         (style, controlVar) =>
           controlVar && (
-            <animated.div style={style} className=" z-50  h-full fixed">
+            <animated.div
+              style={style}
+              className=" z-50  h-full w-full fixed bg-orange"
+            >
               <button onClick={props.toggle}>CLOSE</button>
+              <nav>
+                <ul className=" font-[Tommy] text-offWhite text-6xl p-5">
+                  <li className=" pb-3">Home</li>
+                  <li className=" pb-3">Web Apps</li>
+                  <li className=" pb-3">Happy Clients</li>
+                </ul>
+              </nav>
             </animated.div>
           )
       )}

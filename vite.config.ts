@@ -1,7 +1,25 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
+const root = resolve(__dirname, "src");
+const outDir = resolve(__dirname, "dist");
+
 export default defineConfig({
-  plugins: [react()]
-})
+  plugins: [react()],
+  root,
+  build: {
+    outDir,
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(root, "index.html"),
+        happyClients: resolve(
+          root,
+          "happy-clients",
+          "/pages/happyClients/index.html"
+        ),
+      },
+    },
+  },
+});

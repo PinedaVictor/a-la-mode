@@ -1,8 +1,6 @@
 import React from "react";
 import { FooterSection } from "./FooterSection";
 
-const footerData = [{}];
-
 export const Footer: React.FC = () => {
   return (
     <>

@@ -1,10 +1,13 @@
 import React from "react";
 import ig from "../../assets/icons/ig.svg";
 import twitter from "../../assets/icons/twitter.svg";
+import tempAVA from "../../assets/images/yes.jpg";
+import { Avatar } from "../elements";
 
 interface HeaderProps {
   toggle: () => void;
 }
+
 export const Header: React.FC<HeaderProps> = (props) => {
   return (
     <>
@@ -20,12 +23,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
             <img src={twitter} width={45} alt="Twitter icon" />
           </picture>
         </div>
-        {/* TODO: Menu and menu icon (svg) */}
-        <div
-          className="flex flex-row right-0 absolute bg-yellow"
-          onClick={props.toggle}
-        >
-          <div>Menu option</div>
+        <div className="flex flex-row right-0 absolute" onClick={props.toggle}>
+          <Avatar img={tempAVA} imgAltText={"Victor Pineda avatar"} />
         </div>
       </header>
     </>
