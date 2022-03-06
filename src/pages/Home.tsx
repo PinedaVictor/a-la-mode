@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Hero, Drawer, Header, Footer } from "../components";
+import { Hero, HeaderNav, Footer } from "../components";
 import { Spacer, Heading, Quotes, ImageGrid } from "../components/elements";
 import { Services, NFTLAB } from "../components/office";
 
@@ -7,8 +7,7 @@ export const Home: React.FC = () => {
   const [menuOpen, toggleMenu] = useState(false);
   return (
     <>
-      <Drawer isOpen={menuOpen} toggle={() => toggleMenu(!menuOpen)} />
-      <Header toggle={() => toggleMenu(!menuOpen)} />
+      <HeaderNav />
       <Spacer>
         <Heading>
           {/* <p>Design</p> */}

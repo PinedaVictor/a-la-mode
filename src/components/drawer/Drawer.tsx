@@ -28,13 +28,18 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
           controlVar && (
             <animated.div
               style={style}
-              className=" z-50  h-full w-full fixed bg-orange"
+              className=" z-50  h-full w-full fixed bg-blue"
             >
+              {/* TODO: Close animation button with SVG icon */}
               <button onClick={props.toggle}>CLOSE</button>
               <nav>
                 <ul className=" font-[Tommy] text-offWhite text-6xl p-5">
-                  <li className=" pb-3">Home</li>
-                  <li className=" pb-3">Web Apps</li>
+                  <Link to="/">
+                    <li className=" pb-3">Home</li>
+                  </Link>
+                  <Link to="/WebApps">
+                    <li className=" pb-3">Web Apps</li>
+                  </Link>
                   <Link to="/HappyClients">
                     <li className=" pb-3">Happy Clients</li>
                   </Link>

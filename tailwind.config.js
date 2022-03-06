@@ -14,6 +14,7 @@ module.exports = {
       offWhite: "#ebf2fa",
       satBlack: "#000000",
       orange: "#ec4826",
+      blue: "#004fee",
     },
   },
   plugins: [],

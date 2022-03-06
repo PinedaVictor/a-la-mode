@@ -16,6 +16,7 @@ export const Footer: React.FC = () => {
           <ul>
             <li>Twitter</li>
             <li>Instagram</li>
+            <li>LinkedIn</li>
           </ul>
         </FooterSection>
         <div>&copy; Dreamlike Digital. All Rights Reserved</div>
