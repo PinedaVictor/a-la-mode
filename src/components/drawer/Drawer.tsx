@@ -29,7 +29,6 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
         (style, controlVar) =>
           controlVar && (
             <animated.div style={style} className=" z-50  h-full fixed">
-              Menu
               <button onClick={props.toggle}>CLOSE</button>
             </animated.div>
           )
