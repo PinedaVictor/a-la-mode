@@ -14,11 +14,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, "index.html"),
-        happyClients: resolve(
-          root,
-          "happy-clients",
-          "/pages/happyClients/index.html"
-        ),
       },
     },
   },
