@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTrail, animated } from "react-spring";
 
 export const Heading: React.FC = (props) => {
   const quotes = React.Children.toArray(props.children);
-  const [animate, setAnimate] = useState(true);
-
+  const animate = true;
   const trails = useTrail(quotes.length, {
     config: { mass: 5, tension: 2000, friction: 400 },
     opacity: animate ? 1 : 0,
@@ -15,11 +14,8 @@ export const Heading: React.FC = (props) => {
 
   return (
     <>
-      <section
-        className="text-offBlack text-7xl font-[Tommy] h-full w-full text-center lg:text-8xl sm:text-6xl"
-        onClick={() => setAnimate(!animate)}
-      >
-        <div className="text-left inline-block align-middle h-full  pb-32 pt-10">
+      <section className="text-offBlack text-7xl font-[Tommy] h-full w-full pl-5 lg:text-8xl sm:text-6xl overflow-hidden">
+        <div className="text-left inline-block align-middle h-full pt-6 pb-44">
           {trails.map((props, index) => (
             <animated.div
               style={{

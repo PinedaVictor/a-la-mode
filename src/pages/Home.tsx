@@ -1,39 +1,34 @@
-import React, { useState } from "react";
-import { Hero, HeaderNav, Footer } from "../components";
-import { Spacer, Heading, Quotes, ImageGrid } from "../components/elements";
+import React from "react";
+import { Hero, HeaderNav, Footer, News } from "../components";
+import { H1, Heading, Quotes, ImageGrid, Spacer } from "../components/elements";
 import { Services, NFTLAB } from "../components/office";
 
 export const Home: React.FC = () => {
-  const [menuOpen, toggleMenu] = useState(false);
   return (
     <>
       <HeaderNav />
-      <Spacer>
-        <Heading>
-          {/* <p>Design</p> */}
-          <p>Web Apps</p>
-          <p>Branding</p>
-          {/* TODO: Aim at a better idea then DLD? NFTs web3 ? */}
-          <p>NFTs</p>
-        </Heading>
-      </Spacer>
+      <Heading>
+        <p>Web Apps</p>
+        <p>Branding</p>
+        <p>NFTs</p>
+      </Heading>
       <Hero />
       <Spacer>
-        <Heading>
-          <p className=" p-4 text-offBlack">Creative Approach</p>
-        </Heading>
+        <H1 heading="Creative Approach" />
       </Spacer>
       <Services />
       <div className=" h-[5rem] bg-satBlack" />
       <ImageGrid />
       <Spacer>
-        <Heading>
-          <p className=" pt-8 text-offBlack">NFT LAB</p>
-        </Heading>
+        <H1 heading="NFT LAB" />
       </Spacer>
       <NFTLAB />
       <div className=" h-[5rem] bg-satBlack" />
       <Quotes />
+      <Spacer>
+        <H1 heading="Latest News" />
+      </Spacer>
+      <News />
       <Footer />
     </>
   );
