@@ -1,7 +1,7 @@
 import React from "react";
 import ig from "../../assets/icons/ig.svg";
 import twitter from "../../assets/icons/twitter.svg";
-import tempAVA from "../../assets/images/yes.jpg";
+import tempAVA from "../../assets/images/idk3.jpg";
 import { Avatar } from "../elements";
 
 interface HeaderProps {

@@ -15,8 +15,8 @@ export const News: React.FC = () => {
   return (
     <>
       <section className="grid-cols-3 flex flex-wrap p-5">
-        {[1, 1, 1].map((item) => (
-          <NewsItem />
+        {[1, 1, 1].map((item, index) => (
+          <NewsItem key={index} />
         ))}
       </section>
     </>

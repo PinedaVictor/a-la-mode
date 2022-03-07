@@ -4,7 +4,7 @@ import img1 from "../../assets/images/idk3.jpg";
 export const NFTLAB: React.FC = () => {
   return (
     <>
-      <section className="grid md:grid-flow-col">
+      <section className=" grid md:grid-flow-col">
         <div className=" bg-tan">
           {/* TODO: Picture that describes what NFTLAB is? FRankenstin? dexter? afro? */}
           <picture>
