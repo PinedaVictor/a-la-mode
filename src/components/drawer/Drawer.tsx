@@ -31,8 +31,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
               className=" z-50  h-full w-full fixed bg-blue"
             >
               {/* TODO: Close animation button with SVG icon */}
-              <button onClick={props.toggle}>CLOSE</button>
-              <nav>
+              <nav className=" pt-28 text-right">
                 <ul className=" font-[Tommy] text-offWhite text-6xl p-5">
                   <Link to="/">
                     <li className=" pb-3">Home</li>
@@ -45,6 +44,14 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
                   </Link>
                 </ul>
               </nav>
+              <div className=" float-right p-5">
+                <button
+                  onClick={props.toggle}
+                  className=" text-offWhite font-[Tommy] border-solid border-4 rounded-full h-12 w-12"
+                >
+                  X
+                </button>
+              </div>
             </animated.div>
           )
       )}

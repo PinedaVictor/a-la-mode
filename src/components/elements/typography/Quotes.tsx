@@ -5,7 +5,7 @@ export const Quotes: React.FC = () => {
   const quotes = [
     "You'll never lose money if you invest in yourself.",
     "Believe in yourself and not in the reality of others.",
-    "Negative opinions are perceptions of those who don't believe in you.",
+    "Reject the perceptions of those who don't believe in you.",
   ];
   const [count, setCount] = useState(0);
 
@@ -30,22 +30,20 @@ export const Quotes: React.FC = () => {
 
   return (
     <>
-      <section>
-        <div className=" bg-satBlack h-64">
-          {transitions((style, item) => (
-            <animated.div style={style} className=" absolute ">
-              <p className="text-offWhite font-[BebasNeue] text-4xl p-5 md:text-8xl">
-                {quotes[item]}
-              </p>
-            </animated.div>
-          ))}
-        </div>
-        <div className=" bg-yellow">
-          <button className=" bg-tan h-10 w-10" onClick={cycleArray}>
-            {"->"}
-          </button>
-        </div>
+      <section className=" bg-satBlack  h-64 w-full pt-10">
+        {transitions((style, item) => (
+          <animated.div style={style} className=" absolute">
+            <p className="text-offWhite font-[BebasNeue] text-5xl p-5 md:text-8xl ">
+              {quotes[item]}
+            </p>
+          </animated.div>
+        ))}
       </section>
+      <div className=" w-full bg-offBlack">
+        <button className="  bg-blue h-10 " onClick={cycleArray}>
+          {"->"}
+        </button>
+      </div>
     </>
   );
 };

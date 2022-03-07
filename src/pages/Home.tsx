@@ -23,12 +23,11 @@ export const Home: React.FC = () => {
         <H1 heading="NFT LAB" />
       </Spacer>
       <NFTLAB />
-      <div className=" h-[5rem] bg-satBlack" />
-      <Quotes />
       <Spacer>
         <H1 heading="Latest News" />
       </Spacer>
       <News />
+      <Quotes />
       <Footer />
     </>
   );
