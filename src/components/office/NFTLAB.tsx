@@ -6,7 +6,7 @@ export const NFTLAB: React.FC = () => {
     <>
       <section className=" grid md:grid-flow-col">
         <div className=" bg-tan">
-          {/* TODO: Picture that describes what NFTLAB is? FRankenstin? dexter? afro? */}
+          {/* TODO: Picture that describes what NFTLAB is? FRankenstin? dexter? afro? image carousel */}
           <picture>
             <source type="image/webp" srcSet={img1} />
             {/* TODO: Alt text */}

@@ -39,11 +39,19 @@ export const Quotes: React.FC = () => {
           </animated.div>
         ))}
       </section>
-      <div className=" w-full bg-offBlack">
-        <button className="  bg-blue h-10 " onClick={cycleArray}>
-          {"->"}
-        </button>
-      </div>
+      <section className=" w-full bg-satBlack pb-4 ">
+        <div className=" flex flex-wrap pl-5">
+          <div className=" h-4 w-4 bg-offWhite mr-2 rounded-full mt-3 border-solid border-2 border-offWhite" />
+          <div className=" h-4 w-4 mr-2 rounded-full mt-3 border-2 border-offWhite" />
+          <div className=" h-4 w-4 mr-2 rounded-full mt-3 border-2 border-offWhite" />
+          {/* <button
+            className=" h-11 w-11 rounded-full ml-40 border-2 border-offWhite"
+            onClick={cycleArray}
+          >
+            {"->"}
+          </button> */}
+        </div>
+      </section>
     </>
   );
 };

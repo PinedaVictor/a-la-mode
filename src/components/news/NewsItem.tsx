@@ -1,6 +1,5 @@
 import React from "react";
-import img from "../../assets/images/idk3.jpg";
-// import img from "../../assets/icons/twitter.svg";
+import img from "../../assets/images/twitter.png";
 import { Avatar } from "../elements";
 
 export const NewsItem: React.FC = () => {
@@ -17,7 +16,7 @@ export const NewsItem: React.FC = () => {
           </p>
         </div>
         <div className="  pt-6 float-right flex ">
-          <p className=" inline-block float-left pt-[1.1rem]  pl-44">
+          <p className=" inline-block float-left pt-[1.1rem]  pl-40 mr-4">
             Read more
           </p>
           {/* TODO: Twitter post link */}

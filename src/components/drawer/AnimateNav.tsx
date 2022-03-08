@@ -16,7 +16,7 @@ export const AnimateNav: React.FC = (props) => {
 
   return (
     <>
-      <div className="">
+      <div>
         {trails.map((props, index) => (
           <animated.div
             style={{
