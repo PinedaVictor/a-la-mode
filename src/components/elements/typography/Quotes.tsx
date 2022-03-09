@@ -30,26 +30,26 @@ export const Quotes: React.FC = () => {
 
   return (
     <>
-      <section className=" bg-satBlack  h-64 w-full pt-10">
-        {transitions((style, item) => (
-          <animated.div style={style} className=" absolute">
-            <p className="text-offWhite font-[BebasNeue] text-5xl p-5 md:text-8xl ">
-              {quotes[item]}
-            </p>
-          </animated.div>
-        ))}
-      </section>
-      <section className=" w-full bg-satBlack pb-4 ">
-        <div className=" flex flex-wrap pl-5">
-          <div className=" h-4 w-4 bg-offWhite mr-2 rounded-full mt-3 border-solid border-2 border-offWhite" />
-          <div className=" h-4 w-4 mr-2 rounded-full mt-3 border-2 border-offWhite" />
-          <div className=" h-4 w-4 mr-2 rounded-full mt-3 border-2 border-offWhite" />
-          {/* <button
-            className=" h-11 w-11 rounded-full ml-40 border-2 border-offWhite"
-            onClick={cycleArray}
-          >
-            {"->"}
-          </button> */}
+      <section className=" bg-satBlack ">
+        <div className=" bg-satBlack h-40 pt-10 flex justify-center">
+          {transitions((style, item) => (
+            <animated.div style={style} className=" absolute">
+              <p className="text-offWhite font-[BebasNeue] text-3xl p-5 md:text-5xl ">
+                {quotes[item]}
+              </p>
+            </animated.div>
+          ))}
+        </div>
+        <div className=" pb-10">
+          <div className=" flex flex-wrap justify-center ">
+            {/* TODO: Change type to avatar with arrow design */}
+            <button
+              onClick={cycleArray}
+              className=" h-10 w-10 mr-3 rounded-full mt-3 border-solid border-2 border-offWhite text-offWhite"
+            >
+              {">"}
+            </button>
+          </div>
         </div>
       </section>
     </>

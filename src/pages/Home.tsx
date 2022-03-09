@@ -30,8 +30,8 @@ export const Home: React.FC = () => {
       <Spacer>
         <H1 heading="Latest News" />
       </Spacer>
-      <News />
       <Quotes />
+      <News />
       <Footer />
     </>
   );
