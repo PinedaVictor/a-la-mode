@@ -5,3 +5,5 @@ export { Spacer } from "./spacers/Spacer";
 export { Quotes } from "./typography/Quotes";
 export { Avatar } from "./avatar/Avatar";
 export { H1 } from "./typography/H1";
+export { ArtPiece } from "./pixels/ArtPiece";
+export { FullScreenPreview } from "./pixels/FullScreenPreview";
