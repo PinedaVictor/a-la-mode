@@ -16,6 +16,13 @@ module.exports = {
       orange: "#ec4826",
       blue: "#004fee",
     },
+    fontFamily: {
+      BN: ["BebasNeue"],
+      TY: ["Tommy"],
+      BR: ["BAYER"],
+      MN: ["Marksman"],
+      TE: ["Torque"],
+    },
   },
   plugins: [],
 };

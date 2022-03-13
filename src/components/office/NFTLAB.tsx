@@ -15,9 +15,8 @@ export const NFTLAB: React.FC = () => {
         </div>
         <div className=" bg-yellow text-5xl font-[Tommy] p-5">
           <ul className=" ">
-            <li>10,000 NFT Collection</li>
-            <li>Art Generation</li>
-            <li>Concept development</li>
+            <li>NFT Art Generation</li>
+            <li>Concept development and Advisement</li>
           </ul>
         </div>
       </section>

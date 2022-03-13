@@ -7,6 +7,7 @@ import {
   ImageGrid,
   Spacer,
   FullScreenPreview,
+  ImageProvider,
 } from "../components/elements";
 import { Services, NFTLAB, Art } from "../components/office";
 
@@ -15,6 +16,7 @@ export const Home: React.FC = () => {
   const [c, setC] = useState(false);
   return (
     <>
+      {/* <ImageProvider> */}
       <FullScreenPreview show={c} toggle={() => setC} />
       <HeaderNav />
       <Heading>
@@ -43,15 +45,14 @@ export const Home: React.FC = () => {
         </p>
       </div>
       <Art />
-
       <button onClick={() => setC(!c)}>YES</button>
       <Spacer>
         <H1 heading="Latest News" />
       </Spacer>
       <News />
       <Quotes />
-
       <Footer />
+      {/* </ImageProvider> */}
     </>
   );
 };
