@@ -82,7 +82,8 @@ export const ImageCarousel: React.FC = () => {
             <animated.div
               className="h-full w-full absolute"
               style={{ ...styles, touchAction: "pan-x" }}
-              {...bind()}
+              // TODO: FIXME: DO need gestures? Would it engage user?
+              // {...bind()}
             >
               <animated.div
                 style={styles}

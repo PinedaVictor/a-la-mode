@@ -1,7 +1,7 @@
 import React from "react";
 import ig from "../../assets/icons/ig.svg";
 import twitter from "../../assets/icons/twitter.svg";
-import tempAVA from "../../assets/images/idk3.jpg";
+import vic from "../../assets/images/vic2.jpg";
 import { Avatar } from "../elements";
 
 interface HeaderProps {
@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
           </picture>
         </div>
         <div className="flex flex-row right-0 absolute" onClick={props.toggle}>
-          <Avatar img={tempAVA} imgAltText={"Victor Pineda avatar"} />
+          <Avatar img={vic} imgAltText={"Victor Pineda avatar"} />
         </div>
       </header>
     </>

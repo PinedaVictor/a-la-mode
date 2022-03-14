@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { animated, useTransition } from "react-spring";
+import { ImageContext } from "../pixels/ImageProvider";
+import { ArtPiece } from "./ArtPiece";
 
-interface FullScreenProps {
-  show: boolean;
-  toggle: () => void;
-}
+export const FullScreenPreview: React.FC = () => {
+  const [view, setView, imgURL] = useContext(ImageContext);
 
-export const FullScreenPreview: React.FC<FullScreenProps> = (props) => {
-  const fullScreen = useTransition(props.show, {
+  const fullScreen = useTransition(view, {
     from: {
       opacity: 0,
     },
@@ -25,10 +24,20 @@ export const FullScreenPreview: React.FC<FullScreenProps> = (props) => {
           (style, controlVar) =>
             controlVar && (
               <animated.div
-                className="z-[500] h-full w-full fixed bg-yellow"
+                className="z-50 h-full w-full fixed bg-satBlack"
                 style={style}
               >
-                <button onClick={props.toggle}>CLOSE</button>
+                <div className="pt-14 md:pt-0">
+                  <ArtPiece imageURL={imgURL} altText="Art piece display" />
+                </div>
+                <div className=" absolute bottom-48 right-20">
+                  <button
+                    className="text-offWhite font-[Tommy] border-solid border-4 rounded-full h-16 w-16 text-2xl"
+                    onClick={() => setView(false)}
+                  >
+                    X
+                  </button>
+                </div>
               </animated.div>
             )
         )}
