@@ -8,3 +8,4 @@ export { H1 } from "./typography/H1";
 export { ArtPiece } from "./pixels/ArtPiece";
 export { FullScreenPreview } from "./pixels/FullScreenPreview";
 export { ImageProvider } from "./pixels/ImageProvider";
+export { WebDisplay } from "./webdisplay/WebDisplay";
