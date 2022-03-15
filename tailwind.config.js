@@ -15,6 +15,7 @@ module.exports = {
       satBlack: "#000000",
       orange: "#ec4826",
       blue: "#004fee",
+      grey: "#c1c1c1",
     },
     fontFamily: {
       BN: ["BebasNeue"],
