@@ -9,3 +9,4 @@ export { ArtPiece } from "./pixels/ArtPiece";
 export { FullScreenPreview } from "./pixels/FullScreenPreview";
 export { ImageProvider } from "./pixels/ImageProvider";
 export { WebDisplay } from "./webdisplay/WebDisplay";
+export { Clients } from "./clients/Clients";

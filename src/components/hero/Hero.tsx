@@ -3,8 +3,8 @@ import { ImageCarousel } from "../elements/pixels/ImageCarousel";
 export const Hero: React.FC = () => {
   return (
     <>
-      <section className="bg-tan h-screen top-0 flex">
-        <div className="bg-yellow h-full  w-full">
+      <section className=" h-screen top-0 flex">
+        <div className=" bg-blue h-full  w-full">
           <ImageCarousel />
         </div>
       </section>
