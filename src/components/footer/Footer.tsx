@@ -1,12 +1,14 @@
 import React from "react";
 import { FooterSection } from "./FooterSection";
+import { Pitch } from "./Pitch";
 
 export const Footer: React.FC = () => {
   return (
     <>
-      <footer className="flex flex-wrap p-5 grid-cols-3 font-TY">
+      <div className="flex flex-wrap p-5 grid-cols-3 font-TY">
         <FooterSection>
-          <p>About me</p>
+          {/* <p>About me</p> */}
+          <Pitch />
         </FooterSection>
         <FooterSection>
           Social Media links
@@ -20,7 +22,7 @@ export const Footer: React.FC = () => {
           <p>Site map</p>
         </FooterSection>
         <div className="">&copy; Dreamlike Digital. All Rights Reserved</div>
-      </footer>
+      </div>
     </>
   );
 };
