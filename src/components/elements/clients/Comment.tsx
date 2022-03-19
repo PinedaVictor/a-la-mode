@@ -2,19 +2,22 @@ import React from "react";
 import img from "../../../assets/images/vic2.jpg";
 import { Icon } from "../avatar/Icon";
 
-export const Comment: React.FC = () => {
+interface CommentProps {
+  comment: string;
+}
+
+export const Comment: React.FC<CommentProps> = (props) => {
   return (
     <>
       <div>
-        <div className=" absolute">
-          <Icon img={img} imgAltText="Client image" />
+        <div className="pb-7">
+          <div className=" absolute">
+            <Icon img={img} imgAltText="Client image" />
+          </div>
         </div>
-        <div className="flex mt-7 mb-8 bg-iBlue text-offWhite rounded-2xl">
+        <div className="flex  bg-iBlue text-offWhite rounded-2xl w-fit">
           <div className=" pl-4 pt-2 pr-3 pb-1 ">
-            <p>
-              Pleasure working with Jeremy! Looking forward to our next
-              photoshoot.
-            </p>
+            <p>{props.comment}</p>
           </div>
         </div>
       </div>

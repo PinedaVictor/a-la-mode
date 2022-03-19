@@ -3,33 +3,41 @@ import img from "../../../assets/images/art.jpg";
 import img2 from "../../../assets/images/vic2.jpg";
 import { Icon } from "../avatar/Icon";
 import { Comment } from "./Comment";
+import { LeftRightSpring } from "../../springs";
 
 interface ClientProps {
   avatar: { img: string; altText: string };
   review: string;
+  comments: string[];
 }
 
 // TODO: Map client data with props
-
-export const Client: React.FC<ClientProps> = () => {
+export const Client: React.FC<ClientProps> = (props) => {
   return (
     <>
-      <div className=" absolute">
-        <Icon img={img} imgAltText="Client image" />
-      </div>
-      <div className=" absolute ml-3">
-        <Icon img={img2} imgAltText="Client image" />
-      </div>
-      <div className="flex mt-7 mb-8 bg-iGrey text-offBlack rounded-2xl">
-        <div className=" pl-4 pt-2 pr-3 pb-1 ">
-          <p>
-            Great angles! Victor takes the time and patience when it comes to
-            capturing the moment. He also pays attention to detail such as
-            location, clothes. A pleasure to work with, ALL-around great!
-          </p>
+      <LeftRightSpring left={true} height={175}>
+        <div>
+          <div className="pb-7">
+            {/* TODO: Client images */}
+            <div className=" absolute ">
+              <Icon img={img} imgAltText="Client image" />
+            </div>
+            <div className=" absolute ml-3">
+              <Icon img={img2} imgAltText="Client image" />
+            </div>
+          </div>
+          <div className="flex mb-8 bg-iGrey text-offBlack rounded-2xl w-fit">
+            <div className=" pl-4 pt-2 pr-3 pb-1 ">
+              <p>{props.review}</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <Comment />
+      </LeftRightSpring>
+      <LeftRightSpring left={false} height={155}>
+        {props.comments.map((item) => (
+          <Comment comment={item} />
+        ))}
+      </LeftRightSpring>
     </>
   );
 };
