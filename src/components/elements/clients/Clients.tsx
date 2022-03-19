@@ -12,6 +12,7 @@ const clientData = [
     comments: [
       "Pleasure working with you Jeremey, looking forward to our next photoshoot.",
     ],
+    space: 175,
   },
   {
     avatar: { img: img, altText: "Art" },
@@ -22,6 +23,7 @@ const clientData = [
     comments: [
       "Pleasure working with you Jeremey, looking forward to our next photoshoot.",
     ],
+    space: 175,
   },
   {
     avatar: { img: img, altText: "Art" },
@@ -29,19 +31,21 @@ const clientData = [
     comments: [
       "Pleasure working with you Jeremey, looking forward to our next photoshoot.",
     ],
+    space: 75,
   },
 ];
 
 export const Clients: React.FC = () => {
   return (
     <>
-      <section className="p-5 md:pl-40 md:pr-40 grid md:grid-cols-3">
+      <section className="p-5 md:pl-40 md:pr-40 grid md:grid-cols-3 ">
         {clientData.map((item, index) => (
           <Client
             key={index}
             avatar={item.avatar}
             review={item.review}
             comments={item.comments}
+            spaceNeeded={item.space}
           />
         ))}
       </section>

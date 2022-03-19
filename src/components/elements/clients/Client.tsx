@@ -9,13 +9,14 @@ interface ClientProps {
   avatar: { img: string; altText: string };
   review: string;
   comments: string[];
+  spaceNeeded: number;
 }
 
 // TODO: Map client data with props
 export const Client: React.FC<ClientProps> = (props) => {
   return (
     <>
-      <LeftRightSpring left={true} height={175}>
+      <LeftRightSpring left={true} height={props.spaceNeeded}>
         <div>
           <div className="pb-7">
             {/* TODO: Client images */}
