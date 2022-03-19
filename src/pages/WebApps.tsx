@@ -16,8 +16,13 @@ export const WebApps: React.FC = () => {
     <>
       <HeaderNav />
       <section className="grid md:grid-cols-3">
-        {WebAppsData.map((item) => (
-          <WebDisplay image={item.image} link={item.link} title={item.title} />
+        {WebAppsData.map((item, index) => (
+          <WebDisplay
+            key={index}
+            image={item.image}
+            link={item.link}
+            title={item.title}
+          />
         ))}
       </section>
     </>
