@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../../../assets/images/vic2.jpg";
+import img2 from "../../../assets/images/bubble.png";
 import { Icon } from "../avatar/Icon";
 
 interface CommentProps {
@@ -19,6 +20,14 @@ export const Comment: React.FC<CommentProps> = (props) => {
           <div className=" pl-4 pt-2 pr-3 pb-1 ">
             <p>{props.comment}</p>
           </div>
+        </div>
+        <div className=" relative">
+          <img
+            className=" absolute right-0  bottom-0 "
+            src={img2}
+            height={20}
+            width={20}
+          />
         </div>
       </div>
     </>

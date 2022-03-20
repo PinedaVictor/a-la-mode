@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../../assets/images/art.jpg";
 import img2 from "../../../assets/images/vic2.jpg";
+import greyBubble from "../../../assets/images/greyBubble.png";
 import { Icon } from "../avatar/Icon";
 import { Comment } from "./Comment";
 import { LeftRightSpring } from "../../springs";
@@ -31,6 +32,14 @@ export const Client: React.FC<ClientProps> = (props) => {
             <div className=" pl-4 pt-2 pr-3 pb-1 ">
               <p>{props.review}</p>
             </div>
+          </div>
+          <div className=" relative">
+            <img
+              className=" absolute left-0 bottom-8"
+              src={greyBubble}
+              height={20}
+              width={20}
+            />
           </div>
         </div>
       </LeftRightSpring>

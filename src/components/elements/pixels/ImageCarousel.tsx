@@ -4,6 +4,8 @@ import { useTransition, animated } from "react-spring";
 
 import img1 from "../../../assets/images/idk.png";
 import img2 from "../../../assets/images/yes.jpg";
+import img3 from "../../../assets/icons/arrow.png";
+import img4 from "../../../assets/icons/arrowLeft.png";
 
 const imageData = [img1, img2];
 const images = [
@@ -95,12 +97,20 @@ export const ImageCarousel: React.FC = () => {
                   </p>
                 </div>
               </animated.div>
-              <div className="absolute bg-yellow right-1 bottom-14">
+              <div className="absolute  right-4 bottom-14">
                 {/* TODO: SVG icons and data */}
-                <div>Icon 1</div>
-                <div>Icon 2</div>
-                <div>Icon 3</div>
-                <div>Icon 4</div>
+                <div className=" rounded-full bg-offBlack">
+                  <picture>
+                    <source src={img3} />
+                    <img src={img3} width={50} height={50} />
+                  </picture>
+                </div>
+                {/* <div className=" rounded-full bg-offBlack pt-4">
+                  <picture>
+                    <source src={img4} />
+                    <img src={img4} width={50} height={50} />
+                  </picture>
+                </div> */}
               </div>
               <picture>
                 <source type="image/webp" srcSet={images[item].image} />
