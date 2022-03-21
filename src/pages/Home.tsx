@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
         <Services />
         <div className=" h-[5rem] bg-satBlack relative">
           <p className=" text-offWhite absolute pl-5 pb-2 bottom-0 font-[Tommy] text-2xl">
-            Original Photography
+            {"Design"}
           </p>
         </div>
         <ImageGrid />

@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useDrag } from "@use-gesture/react";
 import { useTransition, animated } from "react-spring";
 
-import img1 from "../../../assets/images/idk.png";
+import img1 from "../../../assets/images/IMG_3007.jpg";
 import img2 from "../../../assets/images/yes.jpg";
 import img3 from "../../../assets/icons/arrow.png";
-import img4 from "../../../assets/icons/arrowLeft.png";
 
 const imageData = [img1, img2];
 const images = [
