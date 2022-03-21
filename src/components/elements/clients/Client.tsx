@@ -18,7 +18,7 @@ export const Client: React.FC<ClientProps> = (props) => {
   return (
     <>
       <LeftRightSpring left={true} height={props.spaceNeeded}>
-        <div>
+        <div className="">
           <div className="pb-7">
             {/* TODO: Client images */}
             <div className=" absolute ">

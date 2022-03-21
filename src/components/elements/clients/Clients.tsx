@@ -38,7 +38,7 @@ const clientData = [
 export const Clients: React.FC = () => {
   return (
     <>
-      <section className="p-5 md:pl-40 md:pr-40 grid md:grid-cols-3 ">
+      <section className="p-5 md:pl-40 md:pr-40 grid md:m-auto lg:w-[60%] ">
         {clientData.map((item, index) => (
           <Client
             key={index}
