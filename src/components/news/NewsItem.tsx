@@ -1,11 +1,12 @@
 import React from "react";
-import img from "../../assets/images/twitter.png";
-import { Avatar } from "../elements";
+import img from "../../assets/images/twitter.jpg";
+import { Icon } from "../elements";
+import { ExternalLink } from "../utils";
 
 export const NewsItem: React.FC = () => {
   return (
     <>
-      <div className=" md:w-1/3 h-72">
+      <div className=" md:w-1/3 h-72 mb-4">
         <div className=" inline-block">
           <p className=" font-bold pb-2">10,000 NFT Collection</p>
           <p className=" pr-3">
@@ -15,12 +16,10 @@ export const NewsItem: React.FC = () => {
             and Computer Science majors.
           </p>
         </div>
-        <div className="  pt-6 float-right flex ">
-          <p className=" inline-block float-left pt-[1.1rem]  pl-40 mr-4">
-            Read more
-          </p>
-          {/* TODO: Twitter post link */}
-          <Avatar img={img} imgAltText="Twitte Icon" />
+        <div className="  pt-6  flex  justify-center">
+          <ExternalLink link="https://twitter.com/victorcodez">
+            <Icon img={img} imgAltText="Twitte Icon" />
+          </ExternalLink>
         </div>
       </div>
     </>

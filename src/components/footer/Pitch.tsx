@@ -11,7 +11,7 @@ export const Pitch: React.FC = () => {
         My name is Victor Pineda. Here to help you with your brand, NFT
         colleciton, and front-end development. I have 3 Years of industry
         expeirence and a creative mind that works to help you reach your goals.
-        Feel free to reach at any of my socials or lets chat over email
+        Feel free to contact me at any of my socials or lets chat over email
         pinedavictor095@gmail.com
       </div>
     </>

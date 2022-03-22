@@ -48,6 +48,7 @@ export const Home: React.FC = () => {
         </Spacer>
         <News />
         <Quotes />
+        <div className=" h-16 bg-offWhite" />
         <Footer />
       </ImageProvider>
     </>
