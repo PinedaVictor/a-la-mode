@@ -7,6 +7,7 @@ import img5 from "../../../assets/images/NA.jpg";
 import img6 from "../../../assets/images/hb.jpg";
 import img7 from "../../../assets/images/MV.jpg";
 import img8 from "../../../assets/images/UISStreetSign.jpg";
+import { ArtPiece } from "../../elements";
 
 // TODO: Select photos - have a varity of NFT and great photograghy
 // TODO: Add preview component
@@ -46,12 +47,7 @@ export const ImageGrid: React.FC = () => {
     <>
       <section className=" grid grid-cols-2  w-screen bg-yellow">
         {imgData.map((item) => (
-          <div>
-            <picture>
-              <source type="image/webp" srcSet={item.imgSrc} />
-              <img src={item.imgSrc} alt={item.altText} />
-            </picture>
-          </div>
+          <ArtPiece imageURL={item.imgSrc} altText={item.altText} />
         ))}
       </section>
     </>
