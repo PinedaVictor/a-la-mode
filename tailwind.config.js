@@ -25,6 +25,8 @@ module.exports = {
       BR: ["BAYER"],
       MN: ["Marksman"],
       TE: ["Torque"],
+      SFM: ["sanfranmid"],
+      SFR: ["reg"],
     },
   },
   plugins: [],

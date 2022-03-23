@@ -6,12 +6,11 @@ import { ExternalLink } from "../utils";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-wrap p-5 grid-cols-3 ">
+    <footer className="flex flex-wrap p-5 grid-cols-3 font-SFR">
       <FooterSection>
         <Pitch />
       </FooterSection>
       <FooterSection>
-        <p className=" underline leading-loose">Social Media links </p>
         <ul className=" leading-loose">
           <ExternalLink link="https://twitter.com/victorcodez">
             <li>Twitter</li>

@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../assets/images/art.jpg";
+import img from "../../../assets/images/heart.jpg";
 import img2 from "../../../assets/images/vic2.jpg";
 import greyBubble from "../../../assets/images/greyBubble.png";
 import { Icon } from "../avatar/Icon";
@@ -18,14 +18,14 @@ export const Client: React.FC<ClientProps> = (props) => {
   return (
     <>
       <LeftRightSpring left={true} height={props.spaceNeeded}>
-        <div className="">
+        <div className=" font-SFR">
           <div className="pb-7">
             {/* TODO: Client images */}
             <div className=" absolute ">
-              <Icon img={img} imgAltText="Client image" />
+              <Icon img={img} imgAltText="Heart icon" />
             </div>
-            <div className=" absolute ml-3">
-              <Icon img={img2} imgAltText="Client image" />
+            <div className=" absolute ml-5">
+              <Icon img={props.avatar.img} imgAltText="Client image" />
             </div>
           </div>
           <div className="flex mb-8 bg-iGrey text-offBlack rounded-2xl w-fit">

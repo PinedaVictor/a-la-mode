@@ -18,6 +18,14 @@
   font-family: "Torque";
   src: url("../assets/fonts/TorqueSense.otf") format("opentype");
 }
+@font-face {
+  font-family: "sanfranmid";
+  src: url("../assets/fonts/SFUI-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "reg";
+  src: url("../assets/fonts/SFUI-Regular.otf") format("opentype");
+}
 
 body {
   overflow-x: hidden;

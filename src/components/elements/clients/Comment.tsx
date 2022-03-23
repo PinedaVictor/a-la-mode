@@ -10,7 +10,7 @@ interface CommentProps {
 export const Comment: React.FC<CommentProps> = (props) => {
   return (
     <>
-      <div className="w-fit">
+      <div className="w-fit float-right font-SFR">
         <div className="pb-7 relative">
           <div className=" absolute right-1">
             <Icon img={img} imgAltText="Client image" />

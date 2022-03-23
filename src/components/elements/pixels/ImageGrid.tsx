@@ -21,6 +21,14 @@ const imgData = [
     altText: "",
   },
   {
+    imgSrc: img5,
+    altText: "",
+  },
+  {
+    imgSrc: img4,
+    altText: "",
+  },
+  {
     imgSrc: img7,
     altText: "",
   },
@@ -30,14 +38,6 @@ const imgData = [
   },
   {
     imgSrc: img6,
-    altText: "",
-  },
-  {
-    imgSrc: img5,
-    altText: "",
-  },
-  {
-    imgSrc: img4,
     altText: "",
   },
 ];
