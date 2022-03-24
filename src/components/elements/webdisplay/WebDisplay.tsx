@@ -25,13 +25,11 @@ export const WebDisplay: React.FC<WebDisplayProps> = (props) => {
                 />
               </picture>
             </div>
-            <div className="flex p-2 font-TY border-x-2 border-b-2 rounded-b-lg border-grey">
-              <p className=" text-xl">{props.title}</p>
+            <div className="flex p-2 font-SFM border-x-2 border-b-2 rounded-b-lg border-grey">
+              <p className=" ">{props.title}</p>
               <div className="w-full">
                 <ExternalLink link={props.link}>
-                  <div className=" float-right border-2 rounded-full  mr-3 mt-3 text-xl p-1 border-solid border-b-offBlack">
-                    🚀
-                  </div>
+                  <div className=" float-right mr-3 mt-3 text-2xl ">🚀</div>
                 </ExternalLink>
               </div>
             </div>

@@ -9,7 +9,6 @@ interface LeftRightSpringProps {
 
 export const LeftRightSpring: React.FC<LeftRightSpringProps> = (props) => {
   const items = React.Children.toArray(props.children);
-  console.log("These are my items: ", items[0]);
   const trails = useTrail(items.length, {
     config: { mass: 15, tension: 190, friction: 75 },
     from: {

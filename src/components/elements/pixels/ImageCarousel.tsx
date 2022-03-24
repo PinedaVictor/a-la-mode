@@ -65,6 +65,9 @@ export const ImageCarousel: React.FC = () => {
       cycleArray();
       // bind();
     }, 3000);
+
+    // Unmount function -> This might be wher bin needs to be called
+    return () => {};
   }, [imgCount]);
 
   const transitions = useTransition(imgCount, {

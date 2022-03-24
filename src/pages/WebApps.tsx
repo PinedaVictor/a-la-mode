@@ -2,7 +2,8 @@ import React from "react";
 import { HeaderNav } from "../components";
 import { WebDisplay } from "../components/elements";
 import img from "../assets/images/webapps/UIS.jpg";
-import { LeftRightSpring } from "../components/springs";
+import vicApp from "../assets/images/webapps/vicApp.jpg";
+import landing from "../assets/images/webapps/dldLanding.jpg";
 
 const WebAppsData = [
   {
@@ -11,12 +12,12 @@ const WebAppsData = [
     link: "https://unitedinternationalservices.com/",
   },
   {
-    image: { src: img, altText: "United International web display" },
-    title: "United International",
-    link: "https://unitedinternationalservices.com/",
+    image: { src: vicApp, altText: "United International web display" },
+    title: "Victor Pineda Webfolio",
+    link: "https://pinedavictor.com/",
   },
   {
-    image: { src: img, altText: "United International web display" },
+    image: { src: landing, altText: "United International web display" },
     title: "United International",
     link: "https://unitedinternationalservices.com/",
   },
@@ -26,7 +27,6 @@ export const WebApps: React.FC = () => {
   return (
     <>
       <HeaderNav />
-      {/* <LeftRightSpring left={false} height={450}> */}
       <section className="grid md:grid-cols-3">
         {WebAppsData.map((item, index) => (
           <WebDisplay
@@ -37,7 +37,6 @@ export const WebApps: React.FC = () => {
           />
         ))}
       </section>
-      {/* </LeftRightSpring> */}
     </>
   );
 };

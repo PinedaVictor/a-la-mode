@@ -1,6 +1,5 @@
 import React from "react";
 import img from "../../../assets/images/heart.jpg";
-import img2 from "../../../assets/images/vic2.jpg";
 import greyBubble from "../../../assets/images/greyBubble.png";
 import { Icon } from "../avatar/Icon";
 import { Comment } from "./Comment";
@@ -44,8 +43,8 @@ export const Client: React.FC<ClientProps> = (props) => {
         </div>
       </LeftRightSpring>
       <LeftRightSpring left={false} height={155}>
-        {props.comments.map((item) => (
-          <Comment comment={item} />
+        {props.comments.map((item, index) => (
+          <Comment key={index} comment={item} />
         ))}
       </LeftRightSpring>
     </>
