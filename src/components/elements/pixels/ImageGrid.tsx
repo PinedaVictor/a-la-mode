@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "../../../assets/images/IMG_2801.jpg";
+import img1 from "../../../assets/images/uisBizCard.jpg";
 import img2 from "../../../assets/images/DLDS.jpg";
 import img3 from "../../../assets/images/DLD.jpg";
 import img4 from "../../../assets/images/NAS.jpg";
@@ -29,11 +29,15 @@ const imgData = [
     altText: "",
   },
   {
-    imgSrc: img7,
+    imgSrc: img8,
     altText: "",
   },
   {
-    imgSrc: img8,
+    imgSrc: img1,
+    altText: "",
+  },
+  {
+    imgSrc: img7,
     altText: "",
   },
   {

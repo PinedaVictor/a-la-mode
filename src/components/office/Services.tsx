@@ -4,33 +4,15 @@ import { Service } from "./Service";
 const serviceData = [
   {
     serviceNumber: 1,
-    summery:
-      "Bacon ipsum dolor amet prosciutto pork turducken, leberkas corned beef" +
-      "biltong spare ribs capicola brisket. Venison chuck t-bone jerky cow" +
-      "short loin drumstick shank short ribs andouille. Tail jerky strip" +
-      "steak sirloin beef drumstick venison chuck. Corned beef ground round" +
-      "prosciutto, andouille pastrami chicken drumstick shoulder beef shankle" +
-      "chuck hamburger capicola.",
+    summery: "Digital asset creation and managment",
   },
   {
     serviceNumber: 2,
-    summery:
-      "Bacon ipsum dolor amet prosciutto pork turducken, leberkas corned beef" +
-      "biltong spare ribs capicola brisket. Venison chuck t-bone jerky cow" +
-      "short loin drumstick shank short ribs andouille. Tail jerky strip" +
-      "steak sirloin beef drumstick venison chuck. Corned beef ground round" +
-      "prosciutto, andouille pastrami chicken drumstick shoulder beef shankle" +
-      "chuck hamburger capicola.",
+    summery: "Advisement ",
   },
   {
     serviceNumber: 3,
-    summery:
-      "Bacon ipsum dolor amet prosciutto pork turducken, leberkas corned beef" +
-      "biltong spare ribs capicola brisket. Venison chuck t-bone jerky cow" +
-      "short loin drumstick shank short ribs andouille. Tail jerky strip" +
-      "steak sirloin beef drumstick venison chuck. Corned beef ground round" +
-      "prosciutto, andouille pastrami chicken drumstick shoulder beef shankle" +
-      "chuck hamburger capicola.",
+    summery: "",
   },
 ];
 

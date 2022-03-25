@@ -24,13 +24,15 @@ export const Home: React.FC = () => {
         </Heading>
         <Hero />
         <Spacer>
-          <H1 heading="Creative Approach" />
+          <H1 heading="Branding" />
         </Spacer>
-        <Services />
-        <div className=" h-[5rem] bg-satBlack relative">
-          <p className=" text-offWhite absolute pl-5 pb-2 bottom-0 font-[Tommy] text-2xl">
-            {"Design"}
-          </p>
+        <div className=" h-fit bg-satBlack relative mt-4">
+          <div className=" text-4xl p-5 font-TY ">
+            <ul className=" text-offWhite">
+              <li className=" mb-4 ">Digital assets creation</li>
+              <li className=" mb-4 ">Consulting</li>
+            </ul>
+          </div>
         </div>
         <ImageGrid />
         <Spacer>
