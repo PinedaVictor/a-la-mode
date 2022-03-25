@@ -61,13 +61,14 @@ export const ImageCarousel: React.FC = () => {
   // FIXME: This is affecting gestures
   // TODO: Something even better, implament TicTak inspired menu - Use original SVGs
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       cycleArray();
       // bind();
     }, 3000);
 
-    // Unmount function -> This might be wher bin needs to be called
-    return () => {};
+    return () => {
+      clearTimeout(timer);
+    };
   }, [imgCount]);
 
   const transitions = useTransition(imgCount, {
