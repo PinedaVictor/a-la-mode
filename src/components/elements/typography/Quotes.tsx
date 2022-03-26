@@ -42,12 +42,11 @@ export const Quotes: React.FC = () => {
         </div>
         <div className=" pb-10">
           <div className=" flex flex-wrap justify-center ">
-            {/* TODO: Change type to avatar with arrow design */}
             <button
               onClick={cycleArray}
-              className=" h-10 w-10 mr-3 rounded-full mt-3 border-solid border-2 border-offWhite text-offWhite"
+              className=" h-10 w-10 mr-3 rounded-full mt-3 border-solid border-2 border-offWhite text-offWhite text-2xl font-SFM"
             >
-              {">"}
+              <p className=" mb-2">{">"}</p>
             </button>
           </div>
         </div>

@@ -49,7 +49,7 @@ const imgData = [
 export const ImageGrid: React.FC = () => {
   return (
     <>
-      <section className=" grid grid-cols-2  w-screen bg-yellow">
+      <section className=" grid grid-cols-2 md:grid-cols-4 w-screen bg-yellow">
         {imgData.map((item, index) => (
           <ArtPiece key={index} imageURL={item.imgSrc} altText={item.altText} />
         ))}

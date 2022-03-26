@@ -26,9 +26,9 @@ export const Home: React.FC = () => {
         <Spacer>
           <H1 heading="Branding" />
         </Spacer>
-        <div className=" h-fit bg-satBlack relative mt-4">
+        <div className=" h-fit bg-offBlack relative mt-4">
           <div className=" text-4xl p-5 font-TY ">
-            <ul className=" text-offWhite">
+            <ul className=" text-offWhite pt-4">
               <li className=" mb-4 ">Digital assets creation</li>
               <li className=" mb-4 ">Consulting</li>
             </ul>
