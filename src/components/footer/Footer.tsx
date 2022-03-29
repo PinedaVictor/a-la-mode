@@ -1,14 +1,22 @@
 import React from "react";
 import { FooterSection } from "./FooterSection";
-import { Pitch } from "./Pitch";
+import { Pitch } from "../elements";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "../utils";
 
 export const Footer: React.FC = () => {
+  const pitch =
+    "My name is Victor Pineda. Here to help you with your brand, NFT" +
+    "colleciton, and front-end development. I have a creative mind and ready";
+  "to work towards creative solutions that help you reach your goals. Feel" +
+    "free to contact me at any of my socials or let's chat over email" +
+    "pinedavictor095@gmail.com";
+
+  const intro = "Hi,👋";
   return (
     <footer className="flex flex-wrap p-5 grid-cols-3 font-SFR">
       <FooterSection>
-        <Pitch />
+        <Pitch intro={intro} pitch={pitch} />
       </FooterSection>
       <FooterSection>
         <ul className=" leading-loose">

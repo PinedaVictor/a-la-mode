@@ -9,7 +9,7 @@ import {
   FullScreenPreview,
   ImageProvider,
 } from "../components/elements";
-import { Services, NFTLAB, Art } from "../components/office";
+import { NFTLAB, Art } from "../components/office";
 
 export const Home: React.FC = () => {
   return (
@@ -36,6 +36,7 @@ export const Home: React.FC = () => {
         </div>
         <ImageGrid />
         <Spacer>
+          <div className=" h-16" />
           <H1 heading="NFT LAB" />
         </Spacer>
         <NFTLAB />
