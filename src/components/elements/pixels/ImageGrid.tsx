@@ -9,6 +9,8 @@ import img7 from "../../../assets/images/MV.jpg";
 import img8 from "../../../assets/images/UISStreetSign.jpg";
 import img9 from "../../../assets/images/Branding/dld1.jpg";
 import img10 from "../../../assets/images/Branding/dld2.jpg";
+import img11 from "../../../assets/images/Branding/na1.jpg";
+import img12 from "../../../assets/images/Branding/na2.jpg";
 import { ArtPiece } from "../../elements";
 
 // TODO: Select photos - have a varity of NFT and great photograghy
@@ -36,6 +38,14 @@ const imgData = [
   },
   {
     imgSrc: img4,
+    altText: "",
+  },
+  {
+    imgSrc: img11,
+    altText: "",
+  },
+  {
+    imgSrc: img12,
     altText: "",
   },
   {
