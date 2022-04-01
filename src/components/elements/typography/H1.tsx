@@ -7,7 +7,7 @@ interface H1Props {
 export const H1: React.FC<H1Props> = (props) => {
   return (
     <>
-      <h1 className=" text-6xl font-[Tommy] text-offBlack pl-5">
+      <h1 className=" text-6xl font-[Tommy] text-offBlack pl-5 underline">
         {props.heading}
       </h1>
     </>

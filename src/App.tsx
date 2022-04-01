@@ -11,7 +11,6 @@ export const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/HappyClients" element={<HappyClients />} />
           <Route path="/WebApps" element={<WebApps />} />
-
           {/* <Route path="/Pixels" element={<Pixels />} /> */}
         </Routes>
       </Router>
