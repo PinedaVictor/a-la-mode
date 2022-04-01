@@ -40,9 +40,9 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
                     <Link to="/HappyClients">
                       <li className=" ">Clients</li>
                     </Link>
-                    <Link to="/Pixels">
+                    {/* <Link to="/Pixels">
                       <li className=" ">Pixels</li>
-                    </Link>
+                    </Link> */}
                   </AnimateNav>
                 </ul>
               </nav>
