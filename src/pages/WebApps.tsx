@@ -5,6 +5,7 @@ import img from "../assets/images/webapps/UIS.jpg";
 import vicApp from "../assets/images/webapps/vicApp.jpg";
 import csunnft from "../assets/images/webapps/csunnft.jpg";
 import landing from "../assets/images/webapps/dldLanding.jpg";
+import dld from "../assets/images/webapps/dld.jpg";
 import { LeftRightSpring } from "../components/springs";
 
 const WebAppsData = [
@@ -14,19 +15,24 @@ const WebAppsData = [
     link: "https://unitedinternationalservices.com/",
   },
   {
+    image: { src: dld, altText: "Dreamlike Digital web app display" },
+    title: "Dreamlike Digital",
+    link: "https://dreamlikedigital.com/",
+  },
+  {
+    image: { src: csunnft, altText: "Building NFT" },
+    title: "CSUN NFT",
+    link: "https://thatnft.io/",
+  },
+  {
     image: { src: vicApp, altText: "United International web display" },
     title: "Victor Pineda Webfolio",
     link: "https://pinedavictor.com/",
   },
   {
-    image: { src: landing, altText: "United International web display" },
-    title: "United International",
-    link: "https://unitedinternationalservices.com/",
-  },
-  {
-    image: { src: csunnft, altText: "United International web display" },
-    title: "CSUN NFT",
-    link: "https://thatnft.io/",
+    image: { src: landing, altText: "Glitch website display" },
+    title: "Glitch Theme Landing Page",
+    link: "#",
   },
 ];
 

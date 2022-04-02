@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
     " free to contact me at any of my socials or let's chat over email" +
     "pinedavictor095@gmail.com";
 
-  const intro = "Hi,👋";
+  const intro = "Hi, 👋";
   return (
     <footer className="flex flex-wrap p-5 grid-cols-3 font-SFR">
       <FooterSection>
@@ -23,9 +23,9 @@ export const Footer: React.FC = () => {
           <ExternalLink link="https://twitter.com/victorcodez">
             <li>Twitter</li>
           </ExternalLink>
-          <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
+          {/* <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
             <li>Instagram</li>
-          </ExternalLink>
+          </ExternalLink> */}
           <ExternalLink link="https://www.linkedin.com/in/victor-pineda-84956599/">
             <li>LinkedIn</li>
           </ExternalLink>

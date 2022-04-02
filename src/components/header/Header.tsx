@@ -15,10 +15,11 @@ export const Header: React.FC<HeaderProps> = (props) => {
       <header className="bg-offWhite w-screen h-14 sticky top-0 z-40 ">
         <div className=" absolute left-0 flex pl-2">
           <ExternalLink link="https://www.instagram.com/graphicabyvic/">
-            <picture>
+            {/* IG icon but not needed */}
+            {/* <picture>
               <source type="image/svg+xml" srcSet={ig} />
               <img src={ig} width={45} alt="Instagram icon" />
-            </picture>
+            </picture> */}
           </ExternalLink>
           <ExternalLink link="https://twitter.com/victorcodez">
             <picture>
