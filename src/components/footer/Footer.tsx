@@ -14,43 +14,51 @@ export const Footer: React.FC = () => {
 
   const intro = "Hi, 👋";
   return (
-    <footer className="flex flex-wrap p-5 grid-cols-3 font-SFR">
+    <footer className="flex flex-wrap p-5 grid-cols-3 font-SFR md:mr-32 md:ml-32">
       <FooterSection>
         <Pitch intro={intro} pitch={pitch} />
       </FooterSection>
       <FooterSection>
-        <ul className=" leading-loose">
-          <ExternalLink link="https://twitter.com/victorcodez">
-            <li>Twitter</li>
-          </ExternalLink>
-          {/* <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
+        <div className=" pt-10 md:float-right">
+          <p className="  underline font-BN text-2xl">Social Media</p>
+          <ul className=" leading-loose ">
+            <ExternalLink link="https://twitter.com/victorcodez">
+              <li>Twitter</li>
+            </ExternalLink>
+            {/* <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
             <li>Instagram</li>
           </ExternalLink> */}
-          <ExternalLink link="https://www.linkedin.com/in/victor-pineda-84956599/">
-            <li>LinkedIn</li>
-          </ExternalLink>
-          <ExternalLink link="https://github.com/PinedaVictor">
-            <li>Github</li>
-          </ExternalLink>
-        </ul>
+            <ExternalLink link="https://www.linkedin.com/in/victor-pineda-84956599/">
+              <li>LinkedIn</li>
+            </ExternalLink>
+            <ExternalLink link="https://github.com/PinedaVictor">
+              <li>Github</li>
+            </ExternalLink>
+          </ul>
+        </div>
       </FooterSection>
       <FooterSection>
-        <ul className=" leading-loose">
-          <Link to="/">
-            <li className=" ">Home</li>
-          </Link>
-          <Link to="/WebApps">
-            <li className=" ">Web Apps</li>
-          </Link>
-          <Link to="/HappyClients">
-            <li className=" ">Clients</li>
-          </Link>
-          <Link to="/Pixels">
+        <div className=" pt-10 md:float-right">
+          <p className="  underline font-BN text-2xl">Links</p>
+          <ul className=" leading-loose">
+            <Link to="/">
+              <li className=" ">Home</li>
+            </Link>
+            <Link to="/WebApps">
+              <li className=" ">Web Apps</li>
+            </Link>
+            <Link to="/HappyClients">
+              <li className=" ">Clients</li>
+            </Link>
+            {/* <Link to="/Pixels">
             <li className=" ">Pixels</li>
-          </Link>
-        </ul>
+          </Link> */}
+          </ul>
+        </div>
       </FooterSection>
-      <div className="">&copy; Dreamlike Digital. All Rights Reserved</div>
+      <div className=" p-5 text-sm font-BN">
+        &copy; Dreamlike Digital. All Rights Reserved
+      </div>
     </footer>
   );
 };

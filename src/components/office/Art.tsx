@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { ArtPiece } from "../elements";
 import { useTransition, animated } from "react-spring";
-import img from "../../assets/images/art.jpg";
-import img6 from "../../assets/images/42.jpg";
+import img from "../../assets/images/Art/TV.jpg";
 import dope from "../../assets/images/Art/dopamine3.jpg";
 import circle from "../../assets/images/Art/test2.jpg";
 import vic from "../../assets/images/Art/vic.png";
-import andres from "../../assets/images/Art/andres.png";
+import andres from "../../assets/images/Art/andres.jpg";
+import fourtwo from "../../assets/images/Art/42.jpg";
 
 const Arts = [
   {
@@ -26,7 +26,7 @@ const Arts = [
     altText: "Three stack Art piece",
   },
   {
-    imgURL: img6,
+    imgURL: fourtwo,
     altText: "Tunnel Vision Art piece",
   },
   {
