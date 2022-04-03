@@ -35,17 +35,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
         <ImageGrid />
-        <Spacer>
-          <div className=" h-16" />
-          <H1 heading="NFT LAB" />
-        </Spacer>
         <NFTLAB />
-        <div className=" h-[5rem] bg-satBlack relative">
-          <p className=" text-offWhite absolute pl-5 pb-2 bottom-0 font-[Tommy] text-2xl">
-            Original Art
-          </p>
-        </div>
-        <Art />
         <News />
         <Quotes />
         <div className=" h-16 bg-offWhite" />
