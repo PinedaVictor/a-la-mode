@@ -46,9 +46,6 @@ export const Home: React.FC = () => {
           </p>
         </div>
         <Art />
-        <Spacer>
-          <H1 heading="Latest News" />
-        </Spacer>
         <News />
         <Quotes />
         <div className=" h-16 bg-offWhite" />

@@ -6,7 +6,7 @@ import { ExternalLink } from "../utils";
 export const NewsItem: React.FC = () => {
   return (
     <>
-      <div className=" md:w-1/3 h-72 mb-4">
+      <div className="  mb-4">
         <div className=" inline-block">
           <p className=" font-bold pb-2">10,000 NFT Collection</p>
           <p className=" pr-3">

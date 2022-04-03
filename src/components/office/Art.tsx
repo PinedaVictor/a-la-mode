@@ -37,7 +37,7 @@ const Arts = [
 export const Art: React.FC = () => {
   return (
     <>
-      <section className=" grid grid-cols-2 md:grid-cols-6 pb-8 bg-satBlack">
+      <section className=" grid grid-cols-2 md:grid-cols-4 pb-8 bg-satBlack">
         {Arts.map((item, index) => (
           <ArtPiece key={index} imageURL={item.imgURL} altText={item.altText} />
         ))}
