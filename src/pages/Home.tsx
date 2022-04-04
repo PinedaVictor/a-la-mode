@@ -42,6 +42,7 @@ export const Home: React.FC = () => {
         <Quotes />
         <div className=" h-16 bg-offWhite" />
         <Footer />
+        <div className=" h-16 bg-offWhite" />
         <div className=" text-sm font-BN bg-orange text-center text-offWhite ">
           &copy; Dreamlike Digital. All Rights Reserved
         </div>

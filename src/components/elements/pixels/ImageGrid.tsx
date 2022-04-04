@@ -54,15 +54,15 @@ const imgData = [
     altText: "",
   },
   {
+    imgSrc: img6,
+    altText: "",
+  },
+  {
     imgSrc: img8,
     altText: "",
   },
   {
     imgSrc: img1,
-    altText: "",
-  },
-  {
-    imgSrc: img6,
     altText: "",
   },
 ];
