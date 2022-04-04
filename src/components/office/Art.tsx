@@ -38,11 +38,19 @@ const Arts = [
 export const Art: React.FC = () => {
   const [imgCount, setImgCount] = useState(0);
   const transitions = useTransition(imgCount, {
-    from: { opacity: 0, transform: "translate3d(100%,0,0)" },
-    enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
-    leave: { opacity: 0, transform: "translate3d(-50%,0,0)", display: "none" },
-    delay: 200,
-    config: { friction: 80, mass: 5 },
+    from: {
+      opacity: 0,
+      transform: "translate3d(100%,0,0)",
+    },
+    enter: {
+      opacity: 1,
+      transform: "translate3d(0%,0,0)",
+    },
+    leave: {
+      opacity: 0,
+      transform: "translate3d(-50%,0,0)",
+      display: "none",
+    },
   });
 
   const cycleArray = () => {
@@ -65,7 +73,7 @@ export const Art: React.FC = () => {
       </div>
       <div className="   ">
         {transitions((styles, item) => (
-          <animated.div style={styles} className=" bg-yellow  ">
+          <animated.div style={styles} className="  ">
             <ArtPiece imageURL={Arts[item].imgURL} altText={"whao"} />
           </animated.div>
         ))}

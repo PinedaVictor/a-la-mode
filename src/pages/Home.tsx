@@ -9,7 +9,7 @@ import {
   FullScreenPreview,
   ImageProvider,
 } from "../components/elements";
-import { NFTLAB, Art } from "../components/office";
+import { NFTLAB } from "../components/office";
 
 export const Home: React.FC = () => {
   return (

@@ -1,12 +1,11 @@
 import React from "react";
-import img1 from "../../assets/images/iBot.jpg";
 import { H1 } from "../elements";
 import { Art } from "../office";
 
 export const NFTLAB: React.FC = () => {
   return (
     <>
-      <section className=" grid mt-40 mb-40 w-screen p-5  md:grid-cols-2  lg:pr-10 ">
+      <section className=" grid mt-40 mb-40 w-screen p-5  md:grid-cols-2  lg:pr-10 bg-offWhite ">
         <div className=" text-4xl p-5 font-TY md:text-right">
           <div>
             <H1 heading="NFT LAB" />

@@ -7,7 +7,7 @@ import { ExternalLink } from "../utils";
 export const Footer: React.FC = () => {
   const pitch =
     "My name is Victor Pineda. Here to help you with your brand, NFT " +
-    "collection, and front-end development. Lets" +
+    "collection, and front-end development. Lets " +
     "work towards creative solutions that help you reach your goals. Feel" +
     " free to contact me at any of my socials or let's chat over email " +
     "pinedavictor095@gmail.com";
@@ -25,9 +25,9 @@ export const Footer: React.FC = () => {
             <ExternalLink link="https://twitter.com/victorcodez">
               <li>Twitter</li>
             </ExternalLink>
-            {/* <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
-            <li>Instagram</li>
-          </ExternalLink> */}
+            <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
+              <li>Instagram</li>
+            </ExternalLink>
             <ExternalLink link="https://www.linkedin.com/in/victor-pineda-84956599/">
               <li>LinkedIn</li>
             </ExternalLink>
