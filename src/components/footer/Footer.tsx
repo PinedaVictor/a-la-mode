@@ -6,15 +6,15 @@ import { ExternalLink } from "../utils";
 
 export const Footer: React.FC = () => {
   const pitch =
-    "My name is Victor Pineda. Here to help you with your brand, NFT" +
-    "colleciton, and front-end development. I have a creative mind and ready" +
-    "to work towards creative solutions that help you reach your goals. Feel" +
-    " free to contact me at any of my socials or let's chat over email" +
+    "My name is Victor Pineda. Here to help you with your brand, NFT " +
+    "collection, and front-end development. Lets" +
+    "work towards creative solutions that help you reach your goals. Feel" +
+    " free to contact me at any of my socials or let's chat over email " +
     "pinedavictor095@gmail.com";
 
   const intro = "Hi, 👋";
   return (
-    <footer className="flex flex-wrap p-5 grid-cols-3 font-SFR md:mr-32 md:ml-32">
+    <footer className="flex flex-wrap p-5 w-screen  font-SFR lg:w-3/4 m-auto  ">
       <FooterSection>
         <Pitch intro={intro} pitch={pitch} />
       </FooterSection>
@@ -56,9 +56,6 @@ export const Footer: React.FC = () => {
           </ul>
         </div>
       </FooterSection>
-      <div className=" p-5 text-sm font-BN">
-        &copy; Dreamlike Digital. All Rights Reserved
-      </div>
     </footer>
   );
 };

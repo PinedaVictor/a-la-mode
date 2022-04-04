@@ -24,7 +24,9 @@ export const Home: React.FC = () => {
         </Heading>
         <Hero />
         <Spacer>
-          <H1 heading="Branding" />
+          <div className="pl-5 pt-10">
+            <H1 heading="Branding" />
+          </div>
         </Spacer>
         <div className=" h-fit relative mt-4">
           <div className=" text-4xl p-5 font-TY ">
@@ -40,6 +42,9 @@ export const Home: React.FC = () => {
         <Quotes />
         <div className=" h-16 bg-offWhite" />
         <Footer />
+        <div className=" text-sm font-BN bg-orange text-center text-offWhite ">
+          &copy; Dreamlike Digital. All Rights Reserved
+        </div>
       </ImageProvider>
     </>
   );

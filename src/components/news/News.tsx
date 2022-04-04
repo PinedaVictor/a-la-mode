@@ -15,7 +15,7 @@ const NewsData = [
 export const News: React.FC = () => {
   return (
     <>
-      <section className="grid p-5 md:grid-cols-2 md:m-36 w-fit mt-24 mb-24">
+      <section className="grid p-5 lg:grid-cols-2 md:m-36 w-fit mt-24 mb-24">
         <div className="md:text-center mb-5 ">
           <H1 heading="Latests News" />
         </div>

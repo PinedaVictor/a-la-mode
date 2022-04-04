@@ -5,7 +5,7 @@ import img3 from "../../../assets/images/DLD.jpg";
 import img4 from "../../../assets/images/NAS.jpg";
 import img5 from "../../../assets/images/NA.jpg";
 import img6 from "../../../assets/images/webapps/UIS.jpg";
-import img7 from "../../../assets/images/MV.jpg";
+import img7 from "../../../assets/images/uisLogo.jpg";
 import img8 from "../../../assets/images/UISStreetSign.jpg";
 import img9 from "../../../assets/images/Branding/dld1.jpg";
 import img10 from "../../../assets/images/webApps/dld.jpg";
@@ -42,15 +42,23 @@ const imgData = [
     altText: "",
   },
   {
+    imgSrc: img11,
+    altText: "",
+  },
+  {
+    imgSrc: img12,
+    altText: "",
+  },
+  {
+    imgSrc: img7,
+    altText: "",
+  },
+  {
     imgSrc: img8,
     altText: "",
   },
   {
     imgSrc: img1,
-    altText: "",
-  },
-  {
-    imgSrc: img7,
     altText: "",
   },
   {
