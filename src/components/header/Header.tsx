@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
           </ExternalLink>
         </div>
 
-        <div className="flex flex-row right-0 absolute" onClick={props.toggle}>
+        <div className="flex flex-row right-2 absolute" onClick={props.toggle}>
           <Avatar img={vic} imgAltText={"Victor Pineda avatar"} />
         </div>
       </header>

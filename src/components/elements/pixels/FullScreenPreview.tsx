@@ -27,8 +27,10 @@ export const FullScreenPreview: React.FC = () => {
                 className="z-50 h-full w-full fixed bg-satBlack"
                 style={style}
               >
-                <div className="pt-14 md:pt-0">
-                  <ArtPiece imageURL={imgURL} altText="Art piece display" />
+                <div className="md:grid md:grid-cols-3 pt-7">
+                  <div />
+                  <img src={imgURL} />
+                  <div />
                 </div>
                 <div className=" absolute bottom-48 right-20">
                   <button
