@@ -30,7 +30,7 @@ export const Quotes: React.FC = () => {
 
   return (
     <>
-      <section className=" bg-satBlack pt-8">
+      <section className=" bg-satBlack pt-8 pb-6">
         <div className=" bg-satBlack h-40 pt-10 flex justify-center">
           {transitions((style, item) => (
             <animated.div style={style} className=" absolute">
