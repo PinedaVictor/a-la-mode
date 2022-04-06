@@ -83,10 +83,10 @@ export const Art: React.FC = () => {
           Original Art
         </p>
       </div>
-      <div className="">
+      <div>
         {/* FIXME: Absolute display causes News section to overlay */}
         {transitions((styles, item) => (
-          <animated.div style={styles} className="  ">
+          <animated.div style={styles}>
             <ArtPiece
               imageURL={Arts[item].imgURL}
               altText={Arts[imgCount].altText}
