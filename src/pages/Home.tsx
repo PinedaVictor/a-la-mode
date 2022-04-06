@@ -38,6 +38,7 @@ export const Home: React.FC = () => {
         </div>
         <ImageGrid />
         <NFTLAB />
+
         <News />
         <Quotes />
         <div className=" h-16 bg-offWhite" />
