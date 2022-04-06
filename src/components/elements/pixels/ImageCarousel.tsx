@@ -3,10 +3,10 @@ import { useDrag } from "@use-gesture/react";
 import { useTransition, animated } from "react-spring";
 
 import img1 from "../../../assets/images/IMG_3007.jpg";
-import img2 from "../../../assets/images/yes.jpg";
-import img3 from "../../../assets/icons/arrow.png";
+import img2 from "../../../assets/images/Art/andres.jpg";
+import img3 from "../../../assets/images/Art/building.jpg";
 
-const imageData = [img1, img2];
+const imageData = [img1, img2, img3];
 const images = [
   {
     image: imageData[0],
@@ -15,6 +15,10 @@ const images = [
   {
     image: imageData[1],
     text: "Something new, something unique",
+  },
+  {
+    image: imageData[2],
+    text: "Original NFT Art",
   },
 ];
 
@@ -58,12 +62,10 @@ export const ImageCarousel: React.FC = () => {
     }
   });
 
-  // FIXME: This is affecting gestures
-  // TODO: Something even better, implament TicTak inspired menu - Use original SVGs
   useEffect(() => {
     const timer = setTimeout(() => {
       cycleArray();
-      // bind();
+      bind();
     }, 3000);
 
     return () => {
@@ -85,34 +87,23 @@ export const ImageCarousel: React.FC = () => {
         {transitions((styles, item) => (
           <>
             <animated.div
-              className="h-full w-full absolute"
-              style={{ ...styles, touchAction: "pan-x" }}
-              // TODO: FIXME: DO need gestures? Would it engage user?
-              // {...bind()}
+              className="h-full w-full absolute "
+              style={{ ...styles }}
+              {...bind()}
             >
               <animated.div
                 style={styles}
                 className=" absolute z-10 p-5 w-[25%]"
               >
                 <div className=" inline-block bg-yellow font-[Tommy] translate-y-[25%] w-28 text-5xl">
-                  <p className=" bg-offBlack w-full text-offWhite">
+                  <p className=" bg-satBlack w-full text-offWhite">
                     {images[item].text}
                   </p>
                 </div>
               </animated.div>
               <div className="absolute  right-4 bottom-14">
-                {/* TODO: SVG icons and data */}
-                <div className=" rounded-full bg-offBlack">
-                  <picture>
-                    <source src={img3} />
-                    <img src={img3} width={50} height={50} />
-                  </picture>
-                </div>
-                {/* <div className=" rounded-full bg-offBlack pt-4">
-                  <picture>
-                    <source src={img4} />
-                    <img src={img4} width={50} height={50} />
-                  </picture>
+                {/* <div className=" bg-satBlack text-offWhite font-TY h-fit w-fit text-lg ">
+                  Next
                 </div> */}
               </div>
               <picture>

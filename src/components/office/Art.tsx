@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArtPiece } from "../elements";
 import { useTransition, animated } from "react-spring";
 import img from "../../assets/images/Art/TV.jpg";
@@ -7,6 +7,7 @@ import circle from "../../assets/images/Art/test2.jpg";
 import vic from "../../assets/images/Art/vic.png";
 import andres from "../../assets/images/Art/andres.jpg";
 import fourtwo from "../../assets/images/Art/42.jpg";
+import building from "../../assets/images/Art/building.jpg";
 
 const Arts = [
   {
@@ -14,24 +15,28 @@ const Arts = [
     altText: "Tunnel Vision Art piece",
   },
   {
-    imgURL: vic,
-    altText: "Three stack Art piece",
+    imgURL: andres,
+    altText: "Victor Andres Art piece",
   },
   {
     imgURL: dope,
-    altText: "Tunnel Vision Art piece",
+    altText: "Colorfull Dopamine Art piece",
+  },
+  {
+    imgURL: vic,
+    altText: "Victor Pineda Vector",
+  },
+  {
+    imgURL: building,
+    altText: "Building NFT",
   },
   {
     imgURL: circle,
-    altText: "Three stack Art piece",
+    altText: "Energy Art piece",
   },
   {
     imgURL: fourtwo,
-    altText: "Tunnel Vision Art piece",
-  },
-  {
-    imgURL: andres,
-    altText: "Three stack Art piece",
+    altText: "Fourty Two Art piece",
   },
 ];
 
@@ -64,6 +69,13 @@ export const Art: React.FC = () => {
     });
   };
 
+  useEffect(() => {
+    for (let i = 0; i < Arts.length; i++) {
+      setImgCount(i);
+    }
+    setImgCount(0);
+  }, []);
+
   return (
     <>
       <div className=" h-12 mb-4 relative rounded-t-3xl bg-satBlack">
@@ -73,12 +85,18 @@ export const Art: React.FC = () => {
       </div>
       <div className="">
         {/* FIXME: Absolute display causes News section to overlay */}
-        {/* {transitions((styles, item) => (
+        {transitions((styles, item) => (
           <animated.div style={styles} className="  ">
-            <ArtPiece imageURL={Arts[item].imgURL} altText={"whao"} />
+            <ArtPiece
+              imageURL={Arts[item].imgURL}
+              altText={Arts[imgCount].altText}
+            />
           </animated.div>
-        ))} */}
-        <ArtPiece imageURL={Arts[imgCount].imgURL} altText={"whao"} />
+        ))}
+        {/* <ArtPiece
+          imageURL={Arts[imgCount].imgURL}
+          altText={Arts[imgCount].altText}
+        /> */}
       </div>
       <div
         className=" h-10 bg-satBlack w-1/2 float-right rounded-b-3xl mt-4 "

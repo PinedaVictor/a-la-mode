@@ -7,7 +7,7 @@ import { ExternalLink } from "../utils";
 export const Footer: React.FC = () => {
   const pitch =
     "My name is Victor Pineda. Here to help you with your brand, NFT " +
-    "collection, and front-end development. Lets " +
+    "collection, and front-end development. Let's " +
     "work towards creative solutions that help you reach your goals. Feel" +
     " free to contact me at any of my socials or let's chat over email " +
     "pinedavictor095@gmail.com";
