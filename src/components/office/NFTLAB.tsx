@@ -5,7 +5,7 @@ import { Art } from "../office";
 export const NFTLAB: React.FC = () => {
   return (
     <>
-      <section className=" grid mt-40 mb-40 w-screen p-5  md:grid-cols-2 lg:grid-cols-3  lg:pr-1 ">
+      <section className=" grid mt-40 mb-40 w-screen p-5  md:grid-cols-2 lg:grid-cols-3  lg:pr-1">
         <div className=" text-4xl p-5 font-TY md:text-right">
           <div>
             <H1 heading="NFT LAB" />

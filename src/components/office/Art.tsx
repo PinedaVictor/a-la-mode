@@ -49,7 +49,7 @@ export const Art: React.FC = () => {
     leave: {
       opacity: 0,
       transform: "translate3d(-50%,0,0)",
-      display: "none",
+      position: "absolute",
     },
   });
 
@@ -71,9 +71,9 @@ export const Art: React.FC = () => {
           Original Art
         </p>
       </div>
-      <div className="   ">
+      <div className=" z-30 ">
         {transitions((styles, item) => (
-          <animated.div style={styles} className="  ">
+          <animated.div style={styles} className=" z-30   ">
             <ArtPiece imageURL={Arts[item].imgURL} altText={"whao"} />
           </animated.div>
         ))}
