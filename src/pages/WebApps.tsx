@@ -25,14 +25,14 @@ const WebAppsData = [
     link: "https://thatnft.io/",
   },
   {
-    image: { src: vicApp, altText: "United International web display" },
-    title: "Victor Pineda Webfolio",
-    link: "https://pinedavictor.com/",
+    image: { src: vicApp, altText: "Wep app for CS student portfolio" },
+    title: "Webfolio",
+    link: "https://virnedgraphica.com/",
   },
   {
     image: { src: landing, altText: "Glitch website display" },
-    title: "Glitch Theme Landing Page",
-    link: "#",
+    title: "Glitch Theme Landing Page. Built for creators",
+    link: "https://github.com/PinedaVictor/Glitch-Landing-Page",
   },
 ];
 
@@ -41,7 +41,7 @@ export const WebApps: React.FC = () => {
     <>
       <HeaderNav />
       <LeftRightSpring left={true} height={500}>
-        <section className="grid md:grid-cols-3">
+        <section className="grid md:grid-cols-2 lg:grid-cols-3">
           {WebAppsData.map((item, index) => (
             <WebDisplay
               key={index}

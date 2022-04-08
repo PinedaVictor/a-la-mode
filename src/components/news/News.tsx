@@ -20,7 +20,7 @@ const NewsData = [
       "Company dashboard allowed users to create new blog posts and edit exisiting posts.",
   },
   {
-    title: "JS Functions for Bog Database",
+    title: "JS Functions for Blog Database",
     summary:
       "Fundamentals are important to create great tools in technology. " +
       "Five functions and their use cases that were implemented in the " +
