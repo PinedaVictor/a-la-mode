@@ -13,7 +13,6 @@ export const NFTLAB: React.FC = () => {
           <ul className=" ">
             <li className=" mb-4 ">Art Generation</li>
             <li className=" mb-4 ">Concept development</li>
-            <li className=" mb-4 ">Advisement</li>
           </ul>
         </div>
         <div className="drop-shadow-[25px_35px_35px_rgba(0,0,0,0.50)] ">

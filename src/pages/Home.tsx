@@ -32,7 +32,6 @@ export const Home: React.FC = () => {
           <div className=" text-4xl p-5 font-TY ">
             <ul className=" text-offBlack ">
               <li className=" mb-4 ">Digital Assets Creation</li>
-              <li className=" mb-4 ">Consulting</li>
             </ul>
           </div>
         </div>
