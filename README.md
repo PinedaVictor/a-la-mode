@@ -99,3 +99,5 @@ npm run dev
 ```
 
 ## License
+
+[BSD 3-Clause](https://github.com/PinedaVictor/a-la-mode/blob/main/license)
