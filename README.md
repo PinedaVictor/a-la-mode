@@ -4,9 +4,9 @@
 
 ## Features
 
-✅ Easily customizable
-✅ Small bundle size
-✅ Mobile friendly
+- Easily customizable ✅
+- Small bundle size ✅
+- Mobile friendly ✅
 
 ## Tech
 
