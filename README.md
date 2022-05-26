@@ -4,9 +4,9 @@
 
 ## Features
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ Easily customizable
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ Small bundle size
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ Mobile friendly
+✅ Easily customizable
+✅ Small bundle size
+✅ Mobile friendly
 
 ## Tech
 
@@ -27,7 +27,7 @@ npm i
 npm run dev
 ```
 
-## Directory Structure
+## File Structure
 
 ```
 ├── README.md
