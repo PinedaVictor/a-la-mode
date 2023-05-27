@@ -4,9 +4,8 @@ import { useTransition, animated } from "react-spring";
 
 import img1 from "../../../assets/images/IMG_3007.jpg";
 import img2 from "../../../assets/images/Art/andres.jpg";
-import img3 from "../../../assets/images/Art/building.jpg";
 
-const imageData = [img1, img2, img3];
+const imageData = [img1, img2];
 const images = [
   {
     image: imageData[0],
@@ -15,10 +14,6 @@ const images = [
   {
     image: imageData[1],
     text: "Something new, something unique",
-  },
-  {
-    image: imageData[2],
-    text: "Original NFT Art",
   },
 ];
 

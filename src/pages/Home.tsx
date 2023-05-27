@@ -18,9 +18,9 @@ export const Home: React.FC = () => {
         <FullScreenPreview />
         <HeaderNav />
         <Heading>
+          <p>Mobile &</p>
           <p>Web Apps</p>
-          <p>Branding</p>
-          <p>NFTs</p>
+          <p>CLI Software</p>
         </Heading>
         <Hero />
         <Spacer>
