@@ -25,15 +25,16 @@ export const Home: React.FC = () => {
         <Hero />
         <Spacer>
           <div className="pl-5 pt-10">
-            <H1 heading="Branding" />
+            <H1 heading="Digital strategy" />
           </div>
         </Spacer>
         <div className=" h-fit relative mt-4">
-          <div className=" text-4xl p-5 font-TY ">
+          {/* TODO: Do not delete - leave for content copy */}
+          {/* <div className=" text-4xl p-5 font-TY ">
             <ul className=" text-offBlack ">
-              <li className=" mb-4 ">Digital Assets Creation</li>
+              <li className=" mb-4 ">Digital strategy</li>
             </ul>
-          </div>
+          </div> */}
         </div>
         <ImageGrid />
         <NFTLAB />

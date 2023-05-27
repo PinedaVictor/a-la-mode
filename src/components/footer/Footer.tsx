@@ -3,6 +3,7 @@ import { FooterSection } from "./FooterSection";
 import { Pitch } from "../elements";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "../utils";
+import {} from "firebase/analytics";
 
 export const Footer: React.FC = () => {
   const pitch =
@@ -22,17 +23,17 @@ export const Footer: React.FC = () => {
         <div className=" pt-10 md:float-right">
           <p className="  underline font-BN text-2xl">Social Media</p>
           <ul className=" leading-loose ">
-            <ExternalLink link="https://twitter.com/victorcodez">
-              <li>Twitter</li>
-            </ExternalLink>
-            <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
-              <li>Instagram</li>
-            </ExternalLink>
             <ExternalLink link="https://www.linkedin.com/in/victor-pineda-84956599/">
               <li>LinkedIn</li>
             </ExternalLink>
             <ExternalLink link="https://github.com/PinedaVictor">
               <li>Github</li>
+            </ExternalLink>
+            <ExternalLink link="https://twitter.com/victorcodez">
+              <li>Twitter</li>
+            </ExternalLink>
+            <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
+              <li>Instagram</li>
             </ExternalLink>
           </ul>
         </div>
@@ -44,11 +45,11 @@ export const Footer: React.FC = () => {
             <Link to="/">
               <li className=" ">Home</li>
             </Link>
-            <Link to="/WebApps">
+            {/* <Link to="/WebApps">
               <li className=" ">Web Apps</li>
-            </Link>
+            </Link> */}
             <Link to="/HappyClients">
-              <li className=" ">Clients</li>
+              <li className=" ">tributes</li>
             </Link>
             {/* <Link to="/Pixels">
             <li className=" ">Pixels</li>

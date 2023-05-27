@@ -38,7 +38,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
                       <li className=" ">Web Apps</li>
                     </Link> */}
                     <Link to="/HappyClients">
-                      <li className=" ">Chat</li>
+                      <li className=" ">Tributes</li>
                     </Link>
                     {/* <Link to="/Pixels">
                       <li className=" ">Pixels</li>

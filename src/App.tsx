@@ -1,4 +1,6 @@
 import "./styles/App.css";
+
+import "../src/components/firebase/config";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HappyClients, Home, WebApps, Pixels } from "./pages";
