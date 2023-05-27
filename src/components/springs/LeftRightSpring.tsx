@@ -5,6 +5,7 @@ import { useTrail, animated } from "react-spring";
 interface LeftRightSpringProps {
   left: boolean;
   height: number;
+  children: React.ReactNode;
 }
 
 export const LeftRightSpring: React.FC<LeftRightSpringProps> = (props) => {

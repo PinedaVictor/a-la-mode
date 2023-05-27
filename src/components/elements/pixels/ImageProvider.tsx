@@ -1,5 +1,9 @@
 import React, { createContext, useState } from "react";
 
+type ImageProviderProps = {
+  children: React.ReactNode;
+};
+
 // FIXME: The type definition?
 type ImageContext = [
   any,
@@ -14,7 +18,7 @@ export const ImageContext = createContext<ImageContext>([
   () => {},
 ]);
 
-export const ImageProvider: React.FC = (props) => {
+export const ImageProvider: React.FC<ImageProviderProps> = (props) => {
   const [image, setImage] = useState(false);
   const [imgURL, setImgURL] = useState("");
   return (

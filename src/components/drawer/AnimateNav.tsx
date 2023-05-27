@@ -1,7 +1,11 @@
 import React from "react";
 import { useTrail, animated } from "react-spring";
 
-export const AnimateNav: React.FC = (props) => {
+type AnimateNavProps = {
+  children: React.ReactNode;
+};
+
+export const AnimateNav: React.FC<AnimateNavProps> = (props) => {
   const NavItems = React.Children.toArray(props.children);
 
   const trails = useTrail(NavItems.length, {

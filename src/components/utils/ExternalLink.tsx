@@ -2,6 +2,7 @@ import React from "react";
 
 interface ExternalLinkProps {
   link: string;
+  children: React.ReactNode;
 }
 
 export const ExternalLink: React.FC<ExternalLinkProps> = (props) => {

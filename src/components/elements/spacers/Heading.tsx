@@ -1,7 +1,11 @@
 import React from "react";
 import { useTrail, animated } from "react-spring";
 
-export const Heading: React.FC = (props) => {
+type HeadingProps = {
+  children: React.ReactNode;
+};
+
+export const Heading: React.FC<HeadingProps> = (props) => {
   const quotes = React.Children.toArray(props.children);
   const animate = true;
   const trails = useTrail(quotes.length, {
