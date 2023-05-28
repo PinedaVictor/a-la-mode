@@ -2,8 +2,7 @@ import React from "react";
 import { FooterSection } from "./FooterSection";
 import { Pitch } from "../elements";
 import { Link } from "react-router-dom";
-import { ExternalLink } from "../utils";
-import {} from "firebase/analytics";
+import { ExternalLink } from "../atomic/atoms";
 
 export const Footer: React.FC = () => {
   const pitch =

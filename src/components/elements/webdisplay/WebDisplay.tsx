@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLink } from "../../utils";
+import { ExternalLink } from "../../atomic/atoms";
 
 interface WebDisplayProps {
   image: { src: string; altText: string };

@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../../assets/images/twitter.jpg";
 import { Icon } from "../elements";
-import { ExternalLink } from "../utils";
+import { ExternalLink } from "../atomic/atoms";
 
 interface NewsItemProps {
   title: string;

@@ -1,7 +1,6 @@
 import React from "react";
 // import ig from "../../assets/icons/ig.svg";
 // import twitter from "../../assets/icons/twitter.svg";
-// import { ExternalLink } from "../utils";
 import vic from "../../assets/images/vic2.jpg";
 import emailIcon from "../../assets/images/emailIcon.png";
 import { Avatar } from "../elements";
@@ -9,7 +8,8 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 import { getApp } from "firebase/app";
 
 interface HeaderProps {
-  toggle: () => void;
+  toggleNav: () => void;
+  toggleContact: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = (props) => {
@@ -42,12 +42,18 @@ export const Header: React.FC<HeaderProps> = (props) => {
             </picture>
           </ExternalLink> */}
         </div>
-        <div className="flex flex-row absolute right-16" onClick={props.toggle}>
+        <div
+          className="flex flex-row absolute right-16"
+          onClick={props.toggleContact}
+        >
           <button className="flex" onClick={contactClicked}>
             <Avatar img={emailIcon} imgAltText={"Email contact icon"} />
           </button>
         </div>
-        <div className="flex flex-row right-2 absolute" onClick={props.toggle}>
+        <div
+          className="flex flex-row right-2 absolute"
+          onClick={props.toggleNav}
+        >
           <Avatar img={vic} imgAltText={"Victor Pineda avatar"} />
         </div>
       </header>

@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // import dotenv from "dotenv";
 // dotenv.config();
 // TODO: Add SDKs for Firebase products that you want to use
@@ -18,7 +17,5 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_MEASURMENT_ID,
 };
 
-console.log("Firebase config:", firebaseConfig);
 // Initialize Firebase
 initializeApp(firebaseConfig);
-// export const analytics = getAnalytics(app);

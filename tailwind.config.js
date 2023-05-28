@@ -30,5 +30,5 @@ module.exports = {
       SFR: ["reg"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
