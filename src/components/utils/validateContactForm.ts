@@ -9,7 +9,7 @@ export interface Target extends EventTarget {
   msg: V;
 }
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   phoneNumber: string;

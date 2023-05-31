@@ -3,14 +3,22 @@ import { Trails } from "../../springs/Trails";
 import { Input, TextArea } from "../atoms";
 import { Comment } from "../../elements/clients/Comment";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
-import { Target, validateContactForm } from "../../utils/validateContactForm";
+import {
+  Target,
+  validateContactForm,
+  FormData,
+} from "../../utils/validateContactForm";
 import { LeftChatBubble } from "../atoms/LeftChatBubble";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getApp } from "firebase/app";
 
 export const ContactForm: React.FC = () => {
   const [errMsg, setErrMsg] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   const [userName, setUsername] = useState("");
+  const app = getApp();
+  const db = getFirestore(app);
 
   const handleErrMsg = (msg: string) => {
     setErrMsg(msg);
@@ -27,7 +35,9 @@ export const ContactForm: React.FC = () => {
     }, 3500);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendData = async (data: FormData) => {};
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const target = e.target as Target;
     const data = {
@@ -43,7 +53,12 @@ export const ContactForm: React.FC = () => {
     setUsername(data.name);
     setFormSubmitted(true);
     console.log("Valid form:", validInputs);
-    // TODO: Add to firebase firestore
+    try {
+      // Add a new document in collection "emails"
+      await addDoc(collection(db, "emails"), data);
+    } catch (error) {
+      console.log("Error writing to firstore:", error);
+    }
     setTimeout(() => {
       hanldeSuccess();
     }, 3000);
