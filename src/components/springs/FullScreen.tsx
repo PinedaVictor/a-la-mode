@@ -1,5 +1,5 @@
 import React from "react";
-import { animated, useTransition } from "react-spring";
+import { animated, useTransition } from "@react-spring/web";
 
 type FullScreenProps = {
   children: React.ReactNode;

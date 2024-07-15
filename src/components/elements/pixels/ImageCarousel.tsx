@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDrag } from "@use-gesture/react";
-import { useTransition, animated } from "react-spring";
+import { useTransition, animated } from "@react-spring/web";
 
 import img1 from "../../../assets/images/IMG_3007.jpg";
 import img2 from "../../../assets/images/Art/andres.jpg";

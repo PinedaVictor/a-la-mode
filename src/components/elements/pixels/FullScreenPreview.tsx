@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { animated, useTransition } from "react-spring";
+import { animated, useTransition } from "@react-spring/web";
 import { ImageContext } from "../pixels/ImageProvider";
 import { ArtPiece } from "./ArtPiece";
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTransition, animated } from "react-spring";
+import { useTransition, animated } from "@react-spring/web";
 
 export const Quotes: React.FC = () => {
   const quotes = [
