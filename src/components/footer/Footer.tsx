@@ -28,12 +28,12 @@ export const Footer: React.FC = () => {
             <ExternalLink link="https://github.com/PinedaVictor">
               <li>Github</li>
             </ExternalLink>
-            <ExternalLink link="https://twitter.com/victorcodez">
+            {/* <ExternalLink link="https://twitter.com/victorcodez">
               <li>Twitter</li>
             </ExternalLink>
             <ExternalLink link="https://instagram.com/graphicabyvic?utm_medium=copy_link">
               <li>Instagram</li>
-            </ExternalLink>
+            </ExternalLink> */}
           </ul>
         </div>
       </FooterSection>
