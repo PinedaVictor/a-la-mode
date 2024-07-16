@@ -1,11 +1,11 @@
 import React from "react";
 // import ig from "../../assets/icons/ig.svg";
 // import twitter from "../../assets/icons/twitter.svg";
-import vic from "../../assets/images/vic2.jpg";
 import emailIcon from "../../assets/images/emailIcon.png";
 import { Avatar } from "../elements";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { getApp } from "firebase/app";
+import { MenuIcon } from "../../assets/icons/MenuIcon";
 
 interface HeaderProps {
   toggleNav: () => void;
@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
   };
   return (
     <>
-      <header className="bg-offWhite w-screen h-14 sticky top-0 z-40 ">
+      <header className="bg-offWhite w-screen h-14 sticky top-0 z-40 pt-1">
         <div className=" absolute left-0 flex pl-2">
           {/* TODO: Not needed ATM */}
           {/* <ExternalLink link="https://www.instagram.com/graphicabyvic/">
@@ -54,7 +54,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
           className="flex flex-row right-2 absolute"
           onClick={props.toggleNav}
         >
-          <Avatar img={vic} imgAltText={"Victor Pineda avatar"} />
+          <div className=" pt-1">
+            <MenuIcon />
+          </div>
         </div>
       </header>
     </>
