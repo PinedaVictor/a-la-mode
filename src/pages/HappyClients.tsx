@@ -1,12 +1,11 @@
 import React from "react";
-import { HeaderNav } from "../components";
+import { PageWrapper } from "../components/atomic/templates/PageWrapper";
 import { Clients } from "../components/elements";
 
 export const HappyClients: React.FC = () => {
   return (
-    <>
-      <HeaderNav />
+    <PageWrapper>
       <Clients />
-    </>
+    </PageWrapper>
   );
 };

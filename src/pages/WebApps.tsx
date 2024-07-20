@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderNav } from "../components";
+import { PageWrapper } from "../components/atomic/templates/PageWrapper";
 import { WebDisplay } from "../components/elements";
 import img from "../assets/images/webapps/UIS.jpg";
 import vicApp from "../assets/images/webapps/vicApp.jpg";
@@ -38,8 +38,7 @@ const WebAppsData = [
 
 export const WebApps: React.FC = () => {
   return (
-    <>
-      <HeaderNav />
+    <PageWrapper>
       <LeftRightSpring left={true} height={500}>
         <section className="grid md:grid-cols-2 lg:grid-cols-3">
           {WebAppsData.map((item, index) => (
@@ -52,6 +51,6 @@ export const WebApps: React.FC = () => {
           ))}
         </section>
       </LeftRightSpring>
-    </>
+    </PageWrapper>
   );
 };

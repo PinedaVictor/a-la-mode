@@ -5,7 +5,7 @@ export type ReactChildren = {
 export type Project = {
   title: string;
   link: string;
-  status: "In Progress" | "Released" | "Archived";
+  status: "In Progress" | "Released" | "Archived" | "Repository";
   description: string;
   tags: string[];
 };

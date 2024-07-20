@@ -4,19 +4,19 @@ import { ExternalLink } from "../atoms";
 import { Badge } from "../atoms/Badge";
 
 export const ProjectCard: FC<Project> = (props) => {
-  let badgeColor = "" as "blue" | "green" | "yellow" | "grey";
+  let badgeColor = "" as "blue" | "green" | "yellow" | "grey" | "orange";
   switch (props.status) {
     case "In Progress":
       badgeColor = "yellow";
-
       break;
     case "Released":
       badgeColor = "green";
-
       break;
     case "Archived":
       badgeColor = "grey";
-
+      break;
+    case "Repository":
+      badgeColor = "orange";
       break;
     default:
       badgeColor = "grey";

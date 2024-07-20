@@ -1,18 +1,8 @@
 import { type FC } from "react";
 
-const Badgee = () => {
-  return (
-    <>
-      <span className="inline-flex h-6 items-center rounded-full px-2 py-1 text-xs font-medium bg-grey">
-        In Progress
-      </span>
-    </>
-  );
-};
-
 type Props = {
   text: string;
-  color: "blue" | "green" | "yellow" | "grey";
+  color: "blue" | "green" | "yellow" | "grey" | "orange";
 };
 export const Badge: FC<Props> = (props) => {
   let style = "";
@@ -33,9 +23,18 @@ export const Badge: FC<Props> = (props) => {
       style =
         "inline-flex h-6 items-center rounded-full px-2 py-1 text-xs font-medium bg-grey";
       break;
+    case "orange":
+      style =
+        "inline-flex h-6 items-center rounded-full px-2 py-1 text-xs font-medium bg-lightOrange";
+      break;
     default:
       style = "";
       break;
   }
+  //   return (
+  //     <span className="inline-flex h-6 items-center rounded-full px-2 py-1 text-xs font-medium bg-lightOrange">
+  //       Repo
+  //     </span>
+  //   );
   return <span className={style}>{props.text}</span>;
 };
