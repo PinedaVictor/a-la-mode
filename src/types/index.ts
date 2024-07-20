@@ -1,3 +1,7 @@
+export type ReactChildren = {
+  children: React.ReactNode;
+};
+
 export type Project = {
   title: string;
   link: string;
