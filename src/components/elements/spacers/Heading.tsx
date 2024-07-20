@@ -19,7 +19,7 @@ export const Heading: React.FC<HeadingProps> = (props) => {
   return (
     <>
       <section className="text-offBlack text-6xl md:text-7xl font-[Tommy] h-full w-full pl-5 lg:text-8xl sm:text-6xl overflow-hidden">
-        <div className="text-left inline-block align-middle h-full pt-6 pb-44">
+        <div className="text-left inline-block align-middle h-full pt-6 ">
           {trails.map((props: any, index: number) => (
             <animated.div
               style={{

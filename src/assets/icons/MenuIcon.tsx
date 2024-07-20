@@ -7,8 +7,8 @@ export const MenuIcon = () => {
       stroke-width="1.5"
       stroke="currentColor"
       className="size-6"
-      width="50px"
-      height="50px"
+      width="40px"
+      height="40px"
     >
       <path
         stroke-linecap="round"

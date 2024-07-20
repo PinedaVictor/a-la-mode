@@ -19,6 +19,7 @@ module.exports = {
       iBlue: "#147EFB",
       iGrey: "#d8d8d8",
       red: "#d93030",
+      green: "#04BF20",
     },
     fontFamily: {
       BN: ["BebasNeue"],
