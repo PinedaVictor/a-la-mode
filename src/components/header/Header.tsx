@@ -5,6 +5,8 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 import { getApp } from "firebase/app";
 import { MenuIcon } from "../../assets/icons/MenuIcon";
 import { ExternalLink } from "../atomic/atoms";
+import { HomeIcon } from "../../assets/icons/HomeIcon";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   toggleNav: () => void;
@@ -25,8 +27,13 @@ export const Header: React.FC<HeaderProps> = (props) => {
   };
   return (
     <>
-      <header className="bg-offWhite w-screen h-14 sticky top-0 z-40 pt-2 align-middle">
+      <header className="bg-offWhite w-screen h-14 sticky top-0 z-40 pt-2 align-middle items-center">
         <div className=" absolute left-1 flex pl-3 pt-2">
+          <Link to={"/"} reloadDocument>
+            <HomeIcon />
+          </Link>
+        </div>
+        <div className="flex flex-row absolute right-32 pt-2">
           <ExternalLink link="https://github.com/PinedaVictor">
             <GithubIcon />
           </ExternalLink>
