@@ -57,7 +57,7 @@ export const Home: React.FC = () => {
         </Spacer>
         <Projects projects={projectsConfig.slice(0, 2)} />
         <div className="flex justify-end pr-8 font-TY underline">
-          <Link to="/projects">
+          <Link reloadDocument to="/projects">
             <p>{"View All"}</p>
           </Link>
         </div>
