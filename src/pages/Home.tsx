@@ -30,7 +30,8 @@ export const Home: React.FC = () => {
           <p className=" text-3xl">Software Developer</p>
         </Heading>
         <Hero />
-        <Spacer>
+        {/* TODO: Update with new oppertunity */}
+        {/* <Spacer>
           <div className="pl-5 pt-10">
             <H1 heading="Current Work" />
           </div>
@@ -49,7 +50,7 @@ export const Home: React.FC = () => {
               {"testimonials."}
             </ExternalLink>
           </span>
-        </SpacerSummary>
+        </SpacerSummary> */}
         <Spacer>
           <div className="pl-5 pt-10">
             <H1 heading="Projects" />
