@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterSection } from "./FooterSection";
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { ExternalLink } from "../atomic/atoms";
 
 export const Footer: React.FC = () => {
@@ -26,10 +26,11 @@ export const Footer: React.FC = () => {
             <Link to="/">
               <li className=" ">Home</li>
             </Link>
+
             <Link to="/projects">
               <li className=" ">Projects</li>
             </Link>
-            <Link to="/HappyClients">
+            <Link to="/references">
               <li className=" ">References</li>
             </Link>
           </ul>

@@ -1,7 +1,7 @@
 import React from "react";
 import vic from "../assets/images/vicgithub.jpg";
 import { Hero, Footer } from "../components";
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { ExternalLink } from "../components/atomic/atoms";
 import { Projects } from "../components/atomic/organisms/Projects";
 import { SpacerSummary } from "../components/atomic/atoms/SpacerSummary";
@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
         </Spacer>
         <Projects projects={projectsConfig.slice(0, 2)} />
         <div className="flex justify-end pr-8 font-TY underline">
-          <Link reloadDocument to="/projects">
+          <Link to="/projects">
             <p>{"View All"}</p>
           </Link>
         </div>

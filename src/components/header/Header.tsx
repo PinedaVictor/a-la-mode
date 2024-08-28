@@ -6,7 +6,8 @@ import { getApp } from "firebase/app";
 import { MenuIcon } from "../../assets/icons/MenuIcon";
 import { ExternalLink } from "../atomic/atoms";
 import { HomeIcon } from "../../assets/icons/HomeIcon";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 
 interface HeaderProps {
   toggleNav: () => void;
@@ -29,7 +30,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
     <>
       <header className="bg-offWhite w-screen h-14 sticky top-0 z-40 pt-2 align-middle items-center">
         <div className=" absolute left-1 flex pl-3 pt-2">
-          <Link to={"/"} reloadDocument>
+          <Link to={"/"}>
             <HomeIcon />
           </Link>
         </div>

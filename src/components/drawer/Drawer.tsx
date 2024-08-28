@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { AnimateNav } from "./AnimateNav";
 import { FullScreen } from "../springs/FullScreen";
 
@@ -20,10 +20,11 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
               {/* <Link to="/WebApps">
                       <li className=" ">Web Apps</li>
                     </Link> */}
+              {/* TODO: Update router */}
               <Link to="/projects">
                 <li className=" ">Projects</li>
               </Link>
-              <Link to="/HappyClients">
+              <Link to="/references">
                 <li className=" ">References</li>
               </Link>
               {/* <Link to="/Pixels">
