@@ -58,9 +58,9 @@ export const Home: React.FC = () => {
         </Spacer>
         <Projects projects={projectsConfig.slice(0, 2)} />
         <div className="flex justify-end pr-8 font-TY underline">
-          <Link reloadDocument to="/projects">
-            <p>{"View All"}</p>
-          </Link>
+          {/* <Link reloadDocument to="/projects">
+          <p>{"View All"}</p>
+        </Link> */}
         </div>
         <Spacer>
           <div className="pl-5 pt-10">
