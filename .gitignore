@@ -5,3 +5,5 @@ dist-ssr
 *.local
 *.firebase
 .env
+# vexal.io vx config 
+.vx 
