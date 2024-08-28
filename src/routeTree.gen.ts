@@ -16,9 +16,21 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
+const ReferencesLazyImport = createFileRoute('/references')()
+const ProjectsLazyImport = createFileRoute('/projects')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
+
+const ReferencesLazyRoute = ReferencesLazyImport.update({
+  path: '/references',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/references.lazy').then((d) => d.Route))
+
+const ProjectsLazyRoute = ProjectsLazyImport.update({
+  path: '/projects',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/projects.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
@@ -36,12 +48,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/references': {
+      id: '/references'
+      path: '/references'
+      fullPath: '/references'
+      preLoaderRoute: typeof ReferencesLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({ IndexLazyRoute })
+export const routeTree = rootRoute.addChildren({
+  IndexLazyRoute,
+  ProjectsLazyRoute,
+  ReferencesLazyRoute,
+})
 
 /* prettier-ignore-end */
 
@@ -51,11 +81,19 @@ export const routeTree = rootRoute.addChildren({ IndexLazyRoute })
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/projects",
+        "/references"
       ]
     },
     "/": {
       "filePath": "index.lazy.tsx"
+    },
+    "/projects": {
+      "filePath": "projects.lazy.tsx"
+    },
+    "/references": {
+      "filePath": "references.lazy.tsx"
     }
   }
 }

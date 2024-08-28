@@ -21,12 +21,12 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
                       <li className=" ">Web Apps</li>
                     </Link> */}
               {/* TODO: Update router */}
-              {/* <Link to="/projects">
+              <Link to="/projects">
                 <li className=" ">Projects</li>
               </Link>
-              <Link to="/HappyClients">
+              <Link to="/references">
                 <li className=" ">References</li>
-              </Link> */}
+              </Link>
               {/* <Link to="/Pixels">
                       <li className=" ">Pixels</li>
                     </Link> */}
