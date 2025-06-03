@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../../../assets/images/vic2.jpg";
+import me from "../../../assets/images/me.jpeg";
 import img2 from "../../../assets/images/bubble.png";
 import { Icon } from "../avatar/Icon";
 
@@ -13,7 +14,7 @@ export const Comment: React.FC<CommentProps> = (props) => {
       <div className="w-fit float-right font-SFR">
         <div className="pb-7 relative">
           <div className=" absolute right-1">
-            <Icon img={img} imgAltText="Client image" />
+            <Icon img={me} imgAltText="Client image" />
           </div>
         </div>
         <div className="flex  bg-iBlue text-offWhite rounded-2xl w-fit">
