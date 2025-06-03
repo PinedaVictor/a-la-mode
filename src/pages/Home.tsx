@@ -1,5 +1,5 @@
 import React from "react";
-import vic from "../assets/images/vicgithub.jpg";
+import vic from "../assets/images/me.jpeg";
 import { Hero, Footer } from "../components";
 import { Link } from "@tanstack/react-router";
 import { ExternalLink } from "../components/atomic/atoms";
@@ -15,7 +15,7 @@ import {
   Spacer,
   FullScreenPreview,
   ImageProvider,
-  Avatar,
+  Avatar
 } from "../components/elements";
 import { NFTLAB } from "../components/office";
 
@@ -30,27 +30,26 @@ export const Home: React.FC = () => {
           <p className=" text-3xl">Software Developer</p>
         </Heading>
         <Hero />
-        {/* TODO: Update with new oppertunity */}
-        {/* <Spacer>
+        <Spacer>
           <div className="pl-5 pt-10">
             <H1 heading="Current Work" />
           </div>
         </Spacer>
         <SpacerSummary>
-          {"Currenlty working as a Software Engineer at "}
+          {"Currenlty working with an amazing team over at "}
           <span className=" underline text-orange font-bold">
-            <ExternalLink link="https://engineeredinnovationgroup.com/">
-              {"The Engineered Innovation Group."}
+            <ExternalLink link="https://buzzsolutions.co/">
+              {"Buzz Solutions!"}
             </ExternalLink>
           </span>
-          {" I collaberate across multiple teams tackling Front End and"}
-          {" Backend End tasks. Happy client "}
+          {" We are building the latest AI tech for energy infrastructure"}
+          {" for a sustainable future. "}
           <span className=" underline text-orange font-bold">
-            <ExternalLink link="https://engineeredinnovationgroup.com/work/#testimonials">
-              {"testimonials."}
+            <ExternalLink link="https://buzzsolutions.co/blog/">
+              {"Read all about it."}
             </ExternalLink>
           </span>
-        </SpacerSummary> */}
+        </SpacerSummary>
         <Spacer>
           <div className="pl-5 pt-10">
             <H1 heading="Projects" />

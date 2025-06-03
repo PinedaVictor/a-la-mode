@@ -2,19 +2,20 @@ import React, { useEffect, useState } from "react";
 import { useDrag } from "@use-gesture/react";
 import { useTransition, animated } from "@react-spring/web";
 
-import img1 from "../../../assets/images/IMG_3007.jpg";
+// import img1 from "../../../assets/images/IMG_3007.jpg";
+import img1 from "../../../assets/images/lifestyle/IMG_5931.jpeg";
 import img2 from "../../../assets/images/Art/andres.jpg";
 
 const imageData = [img1, img2];
 const images = [
   {
     image: imageData[0],
-    text: "Digital Authenticity",
+    text: "Digital Authenticity"
   },
   {
     image: imageData[1],
-    text: "Something new, something unique",
-  },
+    text: "Something new, something unique"
+  }
 ];
 
 export const ImageCarousel: React.FC = () => {
@@ -73,7 +74,7 @@ export const ImageCarousel: React.FC = () => {
     enter: { opacity: 1 },
     leave: { opacity: 0 },
     delay: 200,
-    config: { friction: 80, mass: 5 },
+    config: { friction: 80, mass: 5 }
   });
 
   return (
