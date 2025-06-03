@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDrag } from "@use-gesture/react";
 import { useTransition, animated } from "@react-spring/web";
 
-// import img1 from "../../../assets/images/IMG_3007.jpg";
-import img1 from "../../../assets/images/lifestyle/IMG_5931.jpeg";
+import img1 from "../../../assets/images/lifestyle/IMG_5932.jpg";
 import img2 from "../../../assets/images/Art/andres.jpg";
 
 const imageData = [img1, img2];
