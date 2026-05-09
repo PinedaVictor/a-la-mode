@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
         <Heading>
           <Avatar img={vic} imgAltText={"Victor Pineda avatar"} />
           <p>Hi, I'm Victor</p>
-          <p className=" text-3xl">Software Developer</p>
+          <p className=" text-3xl">Creative Technologist</p>
         </Heading>
         <Hero />
         <Spacer>
