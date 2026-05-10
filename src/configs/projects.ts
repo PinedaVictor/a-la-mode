@@ -2,7 +2,7 @@ import { Project } from "../types";
 
 export const projectsConfig: Project[] = [
   {
-    title: "Vexal.io",
+    title: "vexal.io",
     link: "https://www.vexal.io/",
     description: "Automation tool built for automating developer workflow.",
     tags: [
@@ -15,14 +15,13 @@ export const projectsConfig: Project[] = [
       "Firebase",
       "Homebrew",
       "Cobra-CLI",
-      "Automation",
+      "Automation"
     ],
-    status: "Released",
+    status: "Released"
   },
   {
-    title: "Zvite.io",
-    description:
-      "Invitation system designed ease of use and to promote in-person events.",
+    title: "zvite.io",
+    description: "Mobile platform comming soon...",
     link: "https://www.zvite.io/",
     tags: [
       "React",
@@ -31,23 +30,23 @@ export const projectsConfig: Project[] = [
       "Typescript",
       "Stripe",
       "SupaBase",
-      "Atomic Design",
+      "Atomic Design"
     ],
-    status: "In Progress",
+    status: "Under Construction"
   },
   {
     title: "Vexal Server",
     description: "Open Source Web template",
     link: "https://www.pinedavictor.com/",
     tags: ["OAuth2.0", "React", "Open Source", "NextJS", "Node", "Typescript"],
-    status: "Released",
+    status: "Released"
   },
   {
     title: "a la mode",
     description: "Open Source Web template",
     link: "https://www.pinedavictor.com/",
     tags: ["React", "ViteJS", "Node", "Typescript", "Atomic Design"],
-    status: "Released",
+    status: "Released"
   },
   {
     title: "Durtles",
@@ -59,16 +58,16 @@ export const projectsConfig: Project[] = [
       "OOP",
       "Automation",
       "Directory Utils",
-      "CLI",
+      "CLI"
     ],
-    status: "Repository",
+    status: "Repository"
   },
   {
     title: "Glitch Landing Page",
     description: "Open Source Animated Landing page app",
     link: "https://github.com/PinedaVictor/Glitch-Landing-Page",
     tags: ["React", "Open Source", "Node", "Typescript", "Atomic Design"],
-    status: "Repository",
+    status: "Repository"
   },
   {
     title: "Portfolio Template",
@@ -79,8 +78,8 @@ export const projectsConfig: Project[] = [
       "Open Source",
       "Node",
       "Typescript",
-      "Firebase Cloud Functions",
+      "Firebase Cloud Functions"
     ],
-    status: "Archived",
-  },
+    status: "Archived"
+  }
 ];
