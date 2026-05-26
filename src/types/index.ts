@@ -10,7 +10,8 @@ export type Project = {
     | "Released"
     | "Archived"
     | "Repository"
-    | "Under Construction";
+    | "Under Construction"
+    | "Active";
   description: string;
   tags: string[];
 };

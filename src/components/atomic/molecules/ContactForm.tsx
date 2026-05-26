@@ -68,7 +68,7 @@ export const ContactForm: React.FC = () => {
     <>
       <Trails>
         <div>
-          <Comment comment="Happy to collaborate!" />
+          <Comment comment="Let's work together" />
         </div>
       </Trails>
       {!formSubmitted && (

@@ -16,14 +16,11 @@ export const LeftRightSpring: React.FC<LeftRightSpringProps> = (props) => {
       opacity: 0,
       x: props.left ? -300 : 300,
       y: props.left ? -200 : 200,
-      height: 0,
     },
     to: {
       opacity: 1,
       x: 0,
       y: 0,
-      height: props.height,
-      // TODO: Height needs to be edited if more than one comment is added. With a prop?
     },
   });
   return (

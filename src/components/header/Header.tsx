@@ -1,6 +1,7 @@
 import React from "react";
 import { MsgIcon } from "../../assets/icons/MsgIcon";
 import { GithubIcon } from "../../assets/icons/GithubIcon";
+import { YouTubeIcon } from "../../assets/icons/YouTubeIcon";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { getApp } from "firebase/app";
 import { MenuIcon } from "../../assets/icons/MenuIcon";
@@ -34,21 +35,19 @@ export const Header: React.FC<HeaderProps> = (props) => {
             <HomeIcon />
           </Link>
         </div>
-        <div className="flex flex-row absolute right-32 pt-2">
+        <div className="flex flex-row absolute right-14 pt-2 gap-4 items-center">
+          <ExternalLink link="https://www.youtube.com/@vicblvd">
+            <YouTubeIcon />
+          </ExternalLink>
           <ExternalLink link="https://github.com/PinedaVictor">
             <GithubIcon />
           </ExternalLink>
-        </div>
-        <div
-          className="flex flex-row absolute right-16"
-          onClick={props.toggleContact}
-        >
-          <button className="flex" onClick={contactClicked}>
+          <button className="flex" onClick={() => { props.toggleContact(); contactClicked(); }}>
             <MsgIcon />
           </button>
         </div>
         <div
-          className="flex flex-row right-3 absolute"
+          className="flex flex-row right-3 absolute pt-2"
           onClick={props.toggleNav}
         >
           <MenuIcon />

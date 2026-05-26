@@ -23,6 +23,9 @@ export const ProjectCard: FC<Project> = (props) => {
     case "Under Construction":
       badgeColor = "orange";
       break;
+    case "Active":
+      badgeColor = "green";
+      break;
     default:
       badgeColor = "grey";
       break;

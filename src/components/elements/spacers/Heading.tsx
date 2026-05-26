@@ -18,7 +18,7 @@ export const Heading: React.FC<HeadingProps> = (props) => {
 
   return (
     <>
-      <section className="text-offBlack text-6xl md:text-7xl font-[Tommy] h-full w-full pl-5 lg:text-8xl sm:text-6xl overflow-hidden">
+      <section className="text-offBlack text-5xl min-[393px]:text-6xl md:text-7xl font-[Tommy] h-full w-full pl-5 lg:text-8xl overflow-hidden">
         <div className="text-left inline-block align-middle h-full pt-6 ">
           {trails.map((props: any, index: number) => (
             <animated.div
