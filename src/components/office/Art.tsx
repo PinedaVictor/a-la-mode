@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ArtPiece } from "../elements";
-import { useTransition, animated } from "react-spring";
+import { useTransition, animated } from "@react-spring/web";
 import img from "../../assets/images/Art/TV.jpg";
 import dope from "../../assets/images/Art/dopamine3.jpg";
 import circle from "../../assets/images/Art/test2.jpg";

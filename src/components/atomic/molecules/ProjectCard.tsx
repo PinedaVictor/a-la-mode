@@ -38,6 +38,19 @@ export const ProjectCard: FC<Project> = (props) => {
             <p className=" font-TY font-bold text-2xl">{props.title}</p>
             <Badge color={badgeColor} text={props.status} />
           </div>
+          {props.youtube && (
+            <div className="relative w-full my-3" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded"
+                src={props.youtube}
+                title={`${props.title} demo`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          )}
           <div>
             <p className=" mb-2">{props.description}</p>
             <div className="flex flex-wrap">

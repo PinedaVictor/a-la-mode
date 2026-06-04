@@ -34,6 +34,19 @@ export const Home: React.FC = () => {
         <Hero />
         <Spacer>
           <div className="pl-5 pt-10">
+            <H1 heading="Collab" />
+          </div>
+        </Spacer>
+        <SpacerSummary>
+          {"Looking to build something? I take on select projects through "}
+          <span className="underline text-orange font-bold">
+            <ExternalLink link="https://dreamlikedigital.com">
+              {"Dreamlike Digital."}
+            </ExternalLink>
+          </span>
+        </SpacerSummary>
+        <Spacer>
+          <div className="pl-5 pt-10">
             <H1 heading="Building" />
           </div>
         </Spacer>
@@ -45,12 +58,16 @@ export const Home: React.FC = () => {
         </div>
         <Spacer>
           <div className="pl-5 pt-10">
-            <H1 heading="Hobbies" />
+            <H1 heading="Side B" />
           </div>
         </Spacer>
         <SpacerSummary>
-          In my spare time I like to dedicate time to Graphic Arts, Wood
-          Working, and persuing entrepreneurial ventures.
+          {"Building software, traveling, graphic arts, and woodworking. Documenting all of it on "}
+          <span className="underline text-orange font-bold">
+            <ExternalLink link="https://www.youtube.com/@vicblvd">
+              {"YouTube."}
+            </ExternalLink>
+          </span>
         </SpacerSummary>
         <ImageGrid />
         {/* TODO: Update NFTLAB to something more general */}
@@ -67,7 +84,9 @@ export const Home: React.FC = () => {
               {"Buzz Solutions!"}
             </ExternalLink>
           </span>
-          {" Building the latest AI tech for energy infrastructure for a sustainable future. "}
+          {
+            " Building the latest AI tech for energy infrastructure for a sustainable future. "
+          }
           <span className="underline text-orange font-bold">
             <ExternalLink link="https://buzzsolutions.co/blog/">
               {"Read all about it."}

@@ -5,6 +5,7 @@ export type ReactChildren = {
 export type Project = {
   title: string;
   link: string;
+  youtube?: string;
   status:
     | "In Progress"
     | "Released"

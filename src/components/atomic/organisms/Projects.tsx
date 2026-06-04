@@ -17,6 +17,7 @@ export const Projects: FC<Props> = (props) => {
           link={item.link}
           title={item.title}
           tags={item.tags}
+          youtube={item.youtube}
         />
       ))}
     </section>

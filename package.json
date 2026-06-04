@@ -21,14 +21,13 @@
     "firebase": "^9.22.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.44.2",
-    "react-spring": "^9.4.2"
+    "react-hook-form": "^7.44.2"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
-    "@tanstack/router-cli": "^1.51.0",
-    "@tanstack/router-devtools": "^1.51.0",
-    "@tanstack/router-plugin": "^1.51.0",
+    "@tanstack/router-cli": "^1.167.13",
+    "@tanstack/router-devtools": "^1.167.0",
+    "@tanstack/router-plugin": "^1.168.14",
     "@types/node": "^25.6.2",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",

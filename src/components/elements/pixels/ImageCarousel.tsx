@@ -9,11 +9,11 @@ const imageData = [img1, img2];
 const images = [
   {
     image: imageData[0],
-    text: "Digital Authenticity"
+    text: "Ship it."
   },
   {
     image: imageData[1],
-    text: "Something new, something unique"
+    text: "Build in public."
   }
 ];
 
