@@ -27,6 +27,9 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
               <Link to="/references">
                 <li className=" ">References</li>
               </Link>
+              <Link to="/travel">
+                <li className=" ">Travel</li>
+              </Link>
               {/* <Link to="/Pixels">
                       <li className=" ">Pixels</li>
                     </Link> */}

@@ -16,3 +16,9 @@ export type Project = {
   description: string;
   tags: string[];
 };
+
+export type TravelVideo = {
+  title: string;
+  videoId: string;
+  tags: string[];
+};

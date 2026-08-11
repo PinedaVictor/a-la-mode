@@ -12,63 +12,73 @@ import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRouteImport } from './routes/__root'
 
-const ReferencesLazyRouteImport = createFileRoute('/references')()
-const ProjectsLazyRouteImport = createFileRoute('/projects')()
 const IndexLazyRouteImport = createFileRoute('/')()
+const ProjectsLazyRouteImport = createFileRoute('/projects')()
+const ReferencesLazyRouteImport = createFileRoute('/references')()
+const TravelLazyRouteImport = createFileRoute('/travel')()
 
-const ReferencesLazyRoute = ReferencesLazyRouteImport.update({
-  id: '/references',
-  path: '/references',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/references.lazy').then((d) => d.Route))
-const ProjectsLazyRoute = ProjectsLazyRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/projects.lazy').then((d) => d.Route))
 const IndexLazyRoute = IndexLazyRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+const ProjectsLazyRoute = ProjectsLazyRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/projects.lazy').then((d) => d.Route))
+const ReferencesLazyRoute = ReferencesLazyRouteImport.update({
+  id: '/references',
+  path: '/references',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/references.lazy').then((d) => d.Route))
+const TravelLazyRoute = TravelLazyRouteImport.update({
+  id: '/travel',
+  path: '/travel',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/travel.lazy').then((d) => d.Route))
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/projects': typeof ProjectsLazyRoute
   '/references': typeof ReferencesLazyRoute
+  '/travel': typeof TravelLazyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/projects': typeof ProjectsLazyRoute
   '/references': typeof ReferencesLazyRoute
+  '/travel': typeof TravelLazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexLazyRoute
   '/projects': typeof ProjectsLazyRoute
   '/references': typeof ReferencesLazyRoute
+  '/travel': typeof TravelLazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects' | '/references'
+  fullPaths: '/' | '/projects' | '/references' | '/travel'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects' | '/references'
-  id: '__root__' | '/' | '/projects' | '/references'
+  to: '/' | '/projects' | '/references' | '/travel'
+  id: '__root__' | '/' | '/projects' | '/references' | '/travel'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   ProjectsLazyRoute: typeof ProjectsLazyRoute
   ReferencesLazyRoute: typeof ReferencesLazyRoute
+  TravelLazyRoute: typeof TravelLazyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/references': {
-      id: '/references'
-      path: '/references'
-      fullPath: '/references'
-      preLoaderRoute: typeof ReferencesLazyRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -78,11 +88,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexLazyRouteImport
+    '/references': {
+      id: '/references'
+      path: '/references'
+      fullPath: '/references'
+      preLoaderRoute: typeof ReferencesLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/travel': {
+      id: '/travel'
+      path: '/travel'
+      fullPath: '/travel'
+      preLoaderRoute: typeof TravelLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -92,6 +109,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   ProjectsLazyRoute: ProjectsLazyRoute,
   ReferencesLazyRoute: ReferencesLazyRoute,
+  TravelLazyRoute: TravelLazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
