@@ -3,7 +3,9 @@ import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase/config";
 import { type DownloadableItinerary, type ItineraryAsset } from "../../../types";
 import { Badge } from "../atoms/Badge";
+import { ExternalLink } from "../atoms";
 import { LeftRightSpring } from "../../springs";
+import { YouTubeIcon } from "../../../assets/icons/YouTubeIcon";
 
 export const ItineraryCard: FC<DownloadableItinerary> = (props) => {
   const [downloadingPath, setDownloadingPath] = useState<string | null>(null);
@@ -32,29 +34,50 @@ export const ItineraryCard: FC<DownloadableItinerary> = (props) => {
         <div className=" border-2 p-3 rounded-md border-grey">
           <div className="rounded-t-lg flex flex-row justify-between items-center">
             <p className=" font-TY font-bold text-2xl">{props.title}</p>
+            {props.relatedVideoId && (
+              <ExternalLink
+                link={`https://www.youtube.com/watch?v=${props.relatedVideoId}`}
+              >
+                <YouTubeIcon />
+              </ExternalLink>
+            )}
           </div>
           <p className="my-3">{props.description}</p>
-          <div className="flex flex-wrap">
-            {props.tags.map((tag: string, idx: number) => (
-              <div className=" mr-1 mb-1" key={idx}>
-                <Badge color="blue" text={tag} />
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-col items-end font-TY mt-3">
-            {props.assets.map((asset) => (
-              <button
-                key={asset.storagePath}
-                type="button"
-                onClick={() => handleDownload(asset)}
-                disabled={downloadingPath === asset.storagePath}
-                className="pr-1 mt-1 disabled:opacity-50"
-              >
-                {downloadingPath === asset.storagePath
-                  ? "Preparing download..."
-                  : asset.label}
-              </button>
-            ))}
+          {props.costBreakdown && props.costBreakdown.length > 0 && (
+            <div className="mt-3">
+              <p className="font-TY font-bold">Cost Breakdown</p>
+              <ul className="list-disc list-inside">
+                {props.costBreakdown.map((item, idx) => (
+                  <li key={idx}>
+                    {item.label}: {item.amount}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div className="flex flex-row justify-between items-end mt-3">
+            <div className="flex flex-wrap">
+              {props.tags.map((tag: string, idx: number) => (
+                <div className=" mr-1 mb-1" key={idx}>
+                  <Badge color="blue" text={tag} />
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col items-end font-TY">
+              {props.assets.map((asset) => (
+                <button
+                  key={asset.storagePath}
+                  type="button"
+                  onClick={() => handleDownload(asset)}
+                  disabled={downloadingPath === asset.storagePath}
+                  className="pr-1 mt-1 disabled:opacity-50"
+                >
+                  {downloadingPath === asset.storagePath
+                    ? "Preparing download..."
+                    : asset.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
