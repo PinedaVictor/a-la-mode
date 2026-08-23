@@ -22,3 +22,17 @@ export type TravelVideo = {
   videoId: string;
   tags: string[];
 };
+
+export type ItineraryAsset = {
+  label: string;
+  storagePath: string;
+};
+
+export type DownloadableItinerary = {
+  title: string;
+  slug: string;
+  description: string;
+  tags: string[];
+  relatedVideoId?: string;
+  assets: ItineraryAsset[];
+};

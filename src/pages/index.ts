@@ -4,3 +4,4 @@ export { WebApps } from "./WebApps";
 export { Pixels } from "./Pixels";
 export { ProjectsPage } from "./Projects";
 export { TravelPage } from "./Travel";
+export { TravelGuidesPage } from "./TravelGuides";

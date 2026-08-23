@@ -5,7 +5,7 @@ dist-ssr
 .tanstack
 *.local
 *.firebase
-.env
+.env*
 
 # vexal.io vx config
 .vx*
