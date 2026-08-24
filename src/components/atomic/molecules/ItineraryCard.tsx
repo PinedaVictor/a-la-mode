@@ -1,5 +1,7 @@
 import { type FC, useState } from "react";
 import { ref, getDownloadURL } from "firebase/storage";
+import { getApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
 import { storage } from "../../firebase/config";
 import { type DownloadableItinerary, type ItineraryAsset } from "../../../types";
 import { Badge } from "../atoms/Badge";
@@ -14,6 +16,11 @@ export const ItineraryCard: FC<DownloadableItinerary> = (props) => {
     setDownloadingPath(asset.storagePath);
     try {
       const url = await getDownloadURL(ref(storage, asset.storagePath));
+      logEvent(getAnalytics(getApp()), "itinerary_download", {
+        guide_slug: props.slug,
+        guide_title: props.title,
+        asset_label: asset.label
+      });
       const fileName = asset.storagePath.split("/").pop() || asset.label;
       const link = document.createElement("a");
       link.href = url;

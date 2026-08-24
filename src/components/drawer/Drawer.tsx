@@ -14,23 +14,39 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
         <nav className=" pt-20 text-right ">
           <ul className=" font-[Tommy] text-offBlack text-6xl p-5">
             <AnimateNav>
-              <Link to="/">
+              <Link
+                to="/"
+                activeOptions={{ exact: true }}
+                activeProps={{ className: "text-orange underline" }}
+              >
                 <li className=" ">Home</li>
               </Link>
               {/* <Link to="/WebApps">
                       <li className=" ">Web Apps</li>
                     </Link> */}
               {/* TODO: Update router */}
-              <Link to="/projects">
+              <Link
+                to="/projects"
+                activeProps={{ className: "text-orange underline" }}
+              >
                 <li className=" ">Projects</li>
               </Link>
-              <Link to="/references">
+              <Link
+                to="/references"
+                activeProps={{ className: "text-orange underline" }}
+              >
                 <li className=" ">References</li>
               </Link>
-              <Link to="/travel">
+              <Link
+                to="/travel"
+                activeProps={{ className: "text-orange underline" }}
+              >
                 <li className=" ">Travel</li>
               </Link>
-              <Link to="/travel-guides">
+              <Link
+                to="/travel-guides"
+                activeProps={{ className: "text-orange underline" }}
+              >
                 <li className=" ">Travel Guides</li>
               </Link>
               {/* <Link to="/Pixels">

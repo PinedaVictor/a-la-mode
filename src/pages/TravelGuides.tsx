@@ -1,5 +1,7 @@
-import { type FC } from "react";
+import { type FC, useEffect, useRef } from "react";
 import { ClerkProvider, useUser, UserButton } from "@clerk/react";
+import { getApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
 import { PageWrapper } from "../components/atomic/templates/PageWrapper";
 import { ItineraryDownloads } from "../components/atomic/organisms/ItineraryDownloads";
 import { itinerariesConfig } from "../configs/itineraries";
@@ -14,6 +16,14 @@ const GATE_ENABLED = true;
 const TravelGuidesContent: FC = () => {
   const { isLoaded, isSignedIn } = useUser();
   const unlocked = GATE_ENABLED ? Boolean(isSignedIn) : true;
+  const hasLoggedUnlock = useRef(false);
+
+  useEffect(() => {
+    if (isSignedIn && !hasLoggedUnlock.current) {
+      hasLoggedUnlock.current = true;
+      logEvent(getAnalytics(getApp()), "travel_guides_unlocked");
+    }
+  }, [isSignedIn]);
 
   if (!isLoaded) {
     return <PageWrapper>{null}</PageWrapper>;
