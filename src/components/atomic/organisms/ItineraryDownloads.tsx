@@ -17,7 +17,7 @@ export const ItineraryDownloads: FC<Props> = (props) => {
         <div className="w-full max-w-[400px] mx-auto mb-7">
           <Trails>
             <div>
-              <Comment comment="Hi, thanks for stopping by! No AI here — every guide comes from a trip I've actually taken, written and designed by me, with real cost breakdowns included. Entirely free, no spam. Safe travels!" />
+              <Comment comment="Hi, thanks for stopping by! No AI here—every guide comes from a trip I've actually taken, built from scratch with real routes and actual cost breakdowns. Enter your email below to unlock instant access." />
             </div>
           </Trails>
         </div>
