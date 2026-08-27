@@ -31,6 +31,7 @@ export type ItineraryAsset = {
 export type CostItem = {
   label: string;
   amount: string;
+  region?: string;
 };
 
 export type DownloadableItinerary = {

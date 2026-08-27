@@ -3,11 +3,29 @@ import { ref, getDownloadURL } from "firebase/storage";
 import { getApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { storage } from "../../firebase/config";
-import { type DownloadableItinerary, type ItineraryAsset } from "../../../types";
+import { type DownloadableItinerary, type ItineraryAsset, type CostItem } from "../../../types";
 import { Badge } from "../atoms/Badge";
 import { ExternalLink } from "../atoms";
 import { LeftRightSpring } from "../../springs";
 import { YouTubeIcon } from "../../../assets/icons/YouTubeIcon";
+
+type CostGroup = {
+  region?: string;
+  items: CostItem[];
+};
+
+function groupCostBreakdown(costBreakdown: CostItem[]): CostGroup[] {
+  const groups: CostGroup[] = [];
+  for (const item of costBreakdown) {
+    const lastGroup = groups[groups.length - 1];
+    if (lastGroup && lastGroup.region === item.region) {
+      lastGroup.items.push(item);
+    } else {
+      groups.push({ region: item.region, items: [item] });
+    }
+  }
+  return groups;
+}
 
 export const ItineraryCard: FC<DownloadableItinerary> = (props) => {
   const [downloadingPath, setDownloadingPath] = useState<string | null>(null);
@@ -53,13 +71,20 @@ export const ItineraryCard: FC<DownloadableItinerary> = (props) => {
           {props.costBreakdown && props.costBreakdown.length > 0 && (
             <div className="mt-3">
               <p className="font-TY font-bold">Cost Breakdown</p>
-              <ul className="list-disc list-inside">
-                {props.costBreakdown.map((item, idx) => (
-                  <li key={idx}>
-                    {item.label}: {item.amount}
-                  </li>
-                ))}
-              </ul>
+              {groupCostBreakdown(props.costBreakdown).map((group, idx) => (
+                <div key={idx} className={idx > 0 ? "mt-2" : undefined}>
+                  {group.region && (
+                    <p className="font-TY font-bold text-sm">{group.region}</p>
+                  )}
+                  <ul className="list-disc list-inside">
+                    {group.items.map((item, itemIdx) => (
+                      <li key={itemIdx}>
+                        {item.label}: {item.amount}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           )}
           <div className="flex flex-row justify-between items-end mt-3">
