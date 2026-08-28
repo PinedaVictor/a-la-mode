@@ -19,13 +19,19 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
                 activeOptions={{ exact: true }}
                 activeProps={{ className: "text-orange underline" }}
               >
-                <li className=" ">Home</li>
+                <li className=" ">home</li>
+              </Link>
+              <Link
+                to="/building"
+                activeProps={{ className: "text-orange underline" }}
+              >
+                <li className=" ">building</li>
               </Link>
               {/* <Link to="/WebApps">
                       <li className=" ">Web Apps</li>
                     </Link> */}
               {/* TODO: Update router */}
-              <Link
+              {/* <Link
                 to="/projects"
                 activeProps={{ className: "text-orange underline" }}
               >
@@ -36,18 +42,18 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
                 activeProps={{ className: "text-orange underline" }}
               >
                 <li className=" ">References</li>
-              </Link>
+              </Link> */}
               <Link
                 to="/travel"
                 activeProps={{ className: "text-orange underline" }}
               >
-                <li className=" ">Travel</li>
+                <li className=" ">travel</li>
               </Link>
               <Link
                 to="/travel-guides"
                 activeProps={{ className: "text-orange underline" }}
               >
-                <li className=" ">Travel Guides</li>
+                <li className=" ">travel guides</li>
               </Link>
               {/* <Link to="/Pixels">
                       <li className=" ">Pixels</li>

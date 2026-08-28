@@ -7,6 +7,7 @@ import { ItineraryDownloads } from "../components/atomic/organisms/ItineraryDown
 import { itinerariesConfig } from "../configs/itineraries";
 import { H1, Spacer } from "../components/elements";
 import { SpacerSummary } from "../components/atomic/atoms/SpacerSummary";
+import { ExternalLink } from "../components/atomic/atoms";
 
 // Requires Clerk sign-in (Google/Microsoft only, configured in the Clerk
 // Dashboard) before itineraries unlock. Flip to false to bypass the gate
@@ -51,6 +52,13 @@ const TravelGuidesContent: FC = () => {
         }
       </SpacerSummary>
       <ItineraryDownloads itineraries={itinerariesConfig} unlocked={true} />
+      <div className="flex justify-center pb-10">
+        <ExternalLink link="https://buymeacoffee.com/victorpineda">
+          <div className="border-2 rounded-md border-grey px-5 py-3 text-center font-SFR">
+            Found these guides helpful? Buy me a coffee ☕
+          </div>
+        </ExternalLink>
+      </div>
     </PageWrapper>
   );
 };

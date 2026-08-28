@@ -30,9 +30,19 @@ export const Footer: React.FC = () => {
           <div className="pt-10">
             <p className="underline font-BN text-2xl">Site Links</p>
             <ul className="leading-loose">
-              <Link to="/"><li>Home</li></Link>
-              <Link to="/projects"><li>Projects</li></Link>
-              <Link to="/references"><li>References</li></Link>
+              <Link to="/"><li>home</li></Link>
+              {/* <Link to="/projects"><li>Projects</li></Link>
+              <Link to="/references"><li>References</li></Link> */}
+            </ul>
+          </div>
+        </FooterSection>
+        <FooterSection>
+          <div className="pt-10">
+            <p className="underline font-BN text-2xl whitespace-nowrap">Support</p>
+            <ul className="leading-loose">
+              <ExternalLink link="https://buymeacoffee.com/victorpineda">
+                <li>Buy Me a Coffee</li>
+              </ExternalLink>
             </ul>
           </div>
         </FooterSection>

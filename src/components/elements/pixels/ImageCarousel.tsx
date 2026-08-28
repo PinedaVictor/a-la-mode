@@ -9,7 +9,7 @@ const imageData = [img1, img2];
 const images = [
   {
     image: imageData[0],
-    text: "Ship it."
+    text: "Château de Vaux-le-Vicomte in Maincy, France"
   },
   {
     image: imageData[1],
@@ -88,10 +88,10 @@ export const ImageCarousel: React.FC = () => {
             >
               <animated.div
                 style={styles}
-                className=" absolute z-10 p-5 w-[25%]"
+                className=" absolute z-10 p-5 w-[80%] md:w-[25%]"
               >
-                <div className=" inline-block bg-yellow font-[Tommy] translate-y-[25%] w-28 text-5xl">
-                  <p className=" bg-satBlack w-full text-offWhite">
+                <div className=" inline-block font-[Tommy] translate-y-[25%] w-full text-2xl">
+                  <p className=" bg-satBlack/60 rounded-md w-full text-offWhite">
                     {images[item].text}
                   </p>
                 </div>

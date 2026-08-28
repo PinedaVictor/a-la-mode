@@ -1,16 +1,13 @@
 import React from "react";
 import vic from "../assets/images/vicgithub.jpg";
-import { Hero, Footer } from "../components";
-import { Link } from "@tanstack/react-router";
+import { Footer } from "../components";
+import { SplitImageCarousel } from "../components/elements/pixels/SplitImageCarousel";
 import { ExternalLink } from "../components/atomic/atoms";
-import { Projects } from "../components/atomic/organisms/Projects";
 import { SpacerSummary } from "../components/atomic/atoms/SpacerSummary";
 import { PageWrapper } from "../components/atomic/templates/PageWrapper";
-import { projectsConfig } from "../configs/projects";
 import {
   H1,
   Heading,
-  Quotes,
   ImageGrid,
   Spacer,
   FullScreenPreview,
@@ -20,6 +17,7 @@ import {
 import { NFTLAB } from "../components/office";
 import { ContactForm } from "../components/atomic/molecules/ContactForm";
 import { NewsletterEmbed } from "../components/atomic/molecules/NewsletterEmbed";
+import { Announcements } from "../components/atomic/organisms/Announcements";
 
 export const Home: React.FC = () => {
   return (
@@ -27,38 +25,31 @@ export const Home: React.FC = () => {
       <FullScreenPreview />
       <PageWrapper>
         <Heading>
-          <Avatar img={vic} imgAltText={"Victor Pineda avatar"} />
-          <p>Hi, I'm Victor</p>
-          <p className=" text-3xl">Creative Technologist</p>
+          {/* <p className="flex items-end">
+            hi, I'm Victor
+            <Avatar img={vic} imgAltText={"Victor Pineda avatar"} />
+          </p> */}
+          <p>hi, I'm Victor</p>
+          <p className=" text-3xl">
+            {"dev, art, travel, "}
+            <span className="underline text-orange font-bold">
+              <ExternalLink link="https://buymeacoffee.com/victorpineda">
+                coffee?
+              </ExternalLink>
+            </span>
+          </p>
         </Heading>
-        <Hero />
-        <Spacer>
-          <div className="pl-5 pt-10">
-            <H1 heading="Collab" />
+        <div className="flex flex-col md:flex-row w-full">
+          <div className="w-full h-[60vh] md:h-screen md:w-1/2">
+            <SplitImageCarousel />
           </div>
-        </Spacer>
-        <SpacerSummary>
-          {"Looking to build something? I take on select projects through "}
-          <span className="underline text-orange font-bold">
-            <ExternalLink link="https://dreamlikedigital.com">
-              {"Dreamlike Digital."}
-            </ExternalLink>
-          </span>
-        </SpacerSummary>
-        <Spacer>
-          <div className="pl-5 pt-10">
-            <H1 heading="Building" />
+          <div className="w-full md:h-screen md:w-1/2">
+            <Announcements />
           </div>
-        </Spacer>
-        <Projects projects={projectsConfig.slice(0, 3)} />
-        <div className="flex justify-end pr-8 font-TY underline">
-          <Link to="/projects">
-            <p>{"View All"}</p>
-          </Link>
         </div>
         <Spacer>
           <div className="pl-5 pt-10">
-            <H1 heading="Side B" />
+            <H1 heading="side b" />
           </div>
         </Spacer>
         <SpacerSummary>
@@ -74,7 +65,7 @@ export const Home: React.FC = () => {
         <NFTLAB />
         <Spacer>
           <div className="pl-5 pt-10">
-            <H1 heading="By Day" />
+            <H1 heading="by day" />
           </div>
         </Spacer>
         <SpacerSummary>
@@ -95,7 +86,6 @@ export const Home: React.FC = () => {
         </SpacerSummary>
         {/* TODO: Find a place for the News section */}
         {/* <News /> */}
-        <Quotes />
         <div className="px-5 pt-10 pb-10 max-w-lg mx-auto">
           <ContactForm />
         </div>

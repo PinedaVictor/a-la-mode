@@ -55,6 +55,11 @@ export const ContactForm: React.FC = () => {
     console.log("Valid form:", validInputs);
     try {
       // Add a new document in collection "emails"
+      // TODO: This only writes to Firestore - no one gets notified. Wiring up
+      // the Firebase "Trigger Email from Firestore" extension to watch this
+      // collection. It needs either our own SMTP server or a provider
+      // (SendGrid, Mailchimp Transactional) as the send backend - still
+      // deciding which.
       await addDoc(collection(db, "emails"), data);
     } catch (error) {
       console.log("Error writing to firstore:", error);
