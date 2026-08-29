@@ -1,14 +1,3 @@
-type V = {
-  value: string;
-};
-
-export interface Target extends EventTarget {
-  name: V;
-  email: V;
-  phoneNumber: V;
-  msg: V;
-}
-
 export type FormData = {
   name: string;
   email: string;
@@ -17,6 +6,8 @@ export type FormData = {
 };
 
 const regiEmail = /\S+@\S+\.\S+/;
+
+export const MIN_MESSAGE_LENGTH = 10;
 
 export const validateContactForm = (
   data: FormData
@@ -31,7 +22,7 @@ export const validateContactForm = (
   if (data.name.length <= 3) {
     return { valid: false, error: "Invaild name." };
   }
-  if (data.msg.length < 10) {
+  if (data.msg.length < MIN_MESSAGE_LENGTH) {
     return { valid: false, error: "Please enter a message." };
   }
   return { valid: true, error: "" };

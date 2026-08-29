@@ -1,12 +1,12 @@
 import React from "react";
-import img5 from "../../../assets/images/Art/vic.png";
-import img9 from "../../../assets/images/Art/andres.jpg";
-import img10 from "../../../assets/images/Art/TV.jpg";
+import img5 from "../../../assets/images/Art/vic.webp";
+import img9 from "../../../assets/images/Art/andres.webp";
+import img10 from "../../../assets/images/Art/TV.webp";
 import img42 from "../../../assets/images/42.jpg";
 import imgDope from "../../../assets/images/dopamine3.jpg";
-import plat2 from "../../../assets/images/Art/IMG_0608.jpeg";
-import building from "../../../assets/images/Art/building.jpg";
-import test2 from "../../../assets/images/Art/test2.jpg";
+import plat2 from "../../../assets/images/Art/IMG_0608.webp";
+import building from "../../../assets/images/Art/building.webp";
+import test2 from "../../../assets/images/Art/test2.webp";
 
 import { ArtPiece } from "../../elements";
 

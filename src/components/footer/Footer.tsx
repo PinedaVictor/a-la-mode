@@ -9,19 +9,13 @@ export const Footer: React.FC = () => {
       <div className="flex flex-col md:flex-row md:gap-32">
         <FooterSection>
           <div className="pt-10">
-            <p className="underline font-BN text-2xl whitespace-nowrap">Social Media</p>
+            <p className="underline font-BN text-2xl whitespace-nowrap">Connect</p>
             <ul className="leading-loose">
               <ExternalLink link="https://www.linkedin.com/in/pinedavictor095/">
                 <li>LinkedIn</li>
               </ExternalLink>
               <ExternalLink link="https://github.com/PinedaVictor">
                 <li>Github</li>
-              </ExternalLink>
-              <ExternalLink link="https://www.youtube.com/@vicblvd">
-                <li>YouTube</li>
-              </ExternalLink>
-              <ExternalLink link="https://www.etsy.com/shop/DreamlikedigitalCo">
-                <li>Etsy</li>
               </ExternalLink>
             </ul>
           </div>
@@ -31,6 +25,9 @@ export const Footer: React.FC = () => {
             <p className="underline font-BN text-2xl">Site Links</p>
             <ul className="leading-loose">
               <Link to="/"><li>home</li></Link>
+              <Link to="/building"><li>building</li></Link>
+              <Link to="/travel"><li>travel</li></Link>
+              <Link to="/travel-guides"><li>travel guides</li></Link>
               {/* <Link to="/projects"><li>Projects</li></Link>
               <Link to="/references"><li>References</li></Link> */}
             </ul>
@@ -38,10 +35,16 @@ export const Footer: React.FC = () => {
         </FooterSection>
         <FooterSection>
           <div className="pt-10">
-            <p className="underline font-BN text-2xl whitespace-nowrap">Support</p>
+            <p className="underline font-BN text-2xl whitespace-nowrap">coffee?</p>
             <ul className="leading-loose">
               <ExternalLink link="https://buymeacoffee.com/victorpineda">
-                <li>Buy Me a Coffee</li>
+                <li className="whitespace-nowrap">Buy Me a Coffee</li>
+              </ExternalLink>
+              <ExternalLink link="https://www.etsy.com/shop/DreamlikedigitalCo">
+                <li>Etsy</li>
+              </ExternalLink>
+              <ExternalLink link="https://www.youtube.com/@vicblvd">
+                <li>YouTube</li>
               </ExternalLink>
             </ul>
           </div>

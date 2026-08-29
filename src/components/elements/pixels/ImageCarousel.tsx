@@ -3,7 +3,7 @@ import { useDrag } from "@use-gesture/react";
 import { useTransition, animated } from "@react-spring/web";
 
 import img1 from "../../../assets/images/lifestyle/IMG_5932.jpg";
-import img2 from "../../../assets/images/Art/andres.jpg";
+import img2 from "../../../assets/images/Art/andres.webp";
 
 const imageData = [img1, img2];
 const images = [

@@ -17,7 +17,7 @@ module.exports = {
       blue: "#004fee",
       grey: "#dddddd",
       iBlue: "#147EFB",
-      iGrey: "#d8d8d8",
+      iGrey: "#E5E5EA",
       red: "#d93030",
       green: "#04BF20",
       lightOrange: "#EB976E",

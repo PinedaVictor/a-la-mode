@@ -1,7 +1,7 @@
 import React from "react";
 import { NewsItem } from "./NewsItem";
 import { H1 } from "../elements";
-import an from "../../assets/images/Art/rai.png";
+import an from "../../assets/images/Art/rai.webp";
 
 const NewsData = [
   {

@@ -27,7 +27,7 @@ export const FullScreen: React.FC<FullScreenProps> = (props) => {
           controlVar && (
             <animated.div
               style={style}
-              className={" z-50  h-full w-full bg-offWhite fixed pr-8"}
+              className={" z-[60]  h-full w-full bg-offWhite fixed pr-8"}
             >
               <div>{props.children}</div>
               <div className=" p-7">

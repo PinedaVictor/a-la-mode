@@ -5,19 +5,14 @@ import { Announcement } from "../types";
 export const announcementsConfig: Announcement[] = [
   {
     date: "Aug 2026",
-    title: "Site refresh",
-    body: "Cleaned up the nav, gave Building its own page, and streamlined the homepage."
-  },
-  {
-    date: "Aug 2026",
-    title: "Free Taiwan itinerary added",
-    body: "A full route breakdown from the Taiwan trip is now live in Travel Guides.",
+    title: "Taiwan itinerary added",
+    body: "a full route breakdown from the Taiwan trip is now live in travel guides.",
     link: "/travel-guides"
   },
   {
     date: "Jul 2026",
-    title: "Travel guides now include cost breakdowns",
-    body: "Every itinerary now ships with real cost numbers and the matching YouTube walkthrough.",
+    title: "travel guides now include cost breakdowns",
+    body: "every itinerary now ships with real cost numbers.",
     link: "/travel-guides"
   }
 ];
