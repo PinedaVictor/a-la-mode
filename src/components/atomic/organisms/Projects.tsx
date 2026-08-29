@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Project } from "../../../types";
-import { ProjectCard } from "../molecules/ProjectCard";
+import { TerminalCard } from "../molecules/TerminalCard";
 
 type Props = {
   projects: Project[];
@@ -10,7 +10,7 @@ export const Projects: FC<Props> = (props) => {
   return (
     <section className="grid md:grid-cols-2 lg:grid-cols-3">
       {props.projects.map((item, index) => (
-        <ProjectCard
+        <TerminalCard
           key={index}
           status={item.status}
           description={item.description}

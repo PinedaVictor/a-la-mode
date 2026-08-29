@@ -43,3 +43,10 @@ export type DownloadableItinerary = {
   costBreakdown?: CostItem[];
   assets: ItineraryAsset[];
 };
+
+export type Announcement = {
+  date: string;
+  title: string;
+  body?: string;
+  link?: string;
+};

@@ -6,9 +6,8 @@ export const MenuIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="size-6"
-      width="40px"
-      height="40px"
+      width="28px"
+      height="28px"
     >
       <path
         strokeLinecap="round"

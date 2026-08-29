@@ -16,7 +16,7 @@ export const Input: React.FC<InputProps> = (props) => {
           type="text"
           name={props.name}
           id={props.id}
-          className="block w-full bg-offWhite border-b-2 border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0  sm:leading-6"
+          className="block w-full bg-iGrey border-b-2 border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0  sm:leading-6"
           placeholder={props.placeholder}
         />
       </div>

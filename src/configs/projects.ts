@@ -81,18 +81,18 @@ export const projectsConfig: Project[] = [
     tags: ["React", "Open Source", "Node", "Typescript", "Atomic Design"],
     status: "Repository"
   },
-  {
-    title: "Portfolio Template",
-    description:
-      "The original open source developer portfolio template — a complete, customizable foundation for showcasing projects with tech stack highlights and Firebase integration. Archived in favor of a la mode.",
-    link: "https://github.com/PinedaVictor/webfolio",
-    tags: [
-      "React",
-      "Open Source",
-      "Node",
-      "Typescript",
-      "Firebase Cloud Functions"
-    ],
-    status: "Archived"
-  }
+  // {
+  //   title: "Portfolio Template",
+  //   description:
+  //     "The original open source developer portfolio template — a complete, customizable foundation for showcasing projects with tech stack highlights and Firebase integration. Archived in favor of a la mode.",
+  //   link: "https://github.com/PinedaVictor/webfolio",
+  //   tags: [
+  //     "React",
+  //     "Open Source",
+  //     "Node",
+  //     "Typescript",
+  //     "Firebase Cloud Functions"
+  //   ],
+  //   status: "Archived"
+  // }
 ];

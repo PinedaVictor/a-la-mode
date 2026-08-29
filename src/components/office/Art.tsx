@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { ArtPiece } from "../elements";
 import { useTransition, animated } from "@react-spring/web";
-import img from "../../assets/images/Art/TV.jpg";
-import dope from "../../assets/images/Art/dopamine3.jpg";
-import circle from "../../assets/images/Art/test2.jpg";
-import vic from "../../assets/images/Art/vic.png";
-import andres from "../../assets/images/Art/andres.jpg";
-import fourtwo from "../../assets/images/Art/42.jpg";
-import building from "../../assets/images/Art/building.jpg";
+import img from "../../assets/images/Art/TV.webp";
+import dope from "../../assets/images/Art/dopamine3.webp";
+import circle from "../../assets/images/Art/test2.webp";
+import vic from "../../assets/images/Art/vic.webp";
+import andres from "../../assets/images/Art/andres.webp";
+import fourtwo from "../../assets/images/Art/42.webp";
+import building from "../../assets/images/Art/building.webp";
 
 const Arts = [
   {

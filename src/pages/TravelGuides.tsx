@@ -7,6 +7,8 @@ import { ItineraryDownloads } from "../components/atomic/organisms/ItineraryDown
 import { itinerariesConfig } from "../configs/itineraries";
 import { H1, Spacer } from "../components/elements";
 import { SpacerSummary } from "../components/atomic/atoms/SpacerSummary";
+import { ExternalLink } from "../components/atomic/atoms";
+import { ChatWithMeCTA } from "../components/atomic/molecules/ChatWithMeCTA";
 
 // Requires Clerk sign-in (Google/Microsoft only, configured in the Clerk
 // Dashboard) before itineraries unlock. Flip to false to bypass the gate
@@ -39,18 +41,33 @@ const TravelGuidesContent: FC = () => {
 
   return (
     <PageWrapper>
+      <div className="pl-5 pr-5 pt-20 sm:pt-5 flex justify-end">
+        <UserButton />
+      </div>
       <Spacer>
-        <div className="pl-5 pr-5 flex flex-row justify-between items-center">
+        <div className="pl-5 pr-5 flex flex-wrap items-end gap-3">
           <H1 heading="Travel Guides" />
-          <UserButton />
+          <div className="hidden sm:block -translate-y-3">
+            <ChatWithMeCTA contentType="travel-guides-chat-cta" />
+          </div>
         </div>
       </Spacer>
       <SpacerSummary>
         {
-          "Free itineraries from the trips on my channel. Routes, stops, and tips, ready to download."
+          "Itineraries from the trips on my channel. Routes, stops, and tips, ready to download."
         }
       </SpacerSummary>
+      <div className="pr-5 pb-8 flex justify-end sm:hidden">
+        <ChatWithMeCTA contentType="travel-guides-chat-cta" />
+      </div>
       <ItineraryDownloads itineraries={itinerariesConfig} unlocked={true} />
+      <div className="flex justify-center pb-10">
+        <ExternalLink link="https://buymeacoffee.com/victorpineda">
+          <div className="border-2 rounded-md border-grey px-5 py-3 text-center font-SFR">
+            Found these guides helpful? Buy me a coffee ☕
+          </div>
+        </ExternalLink>
+      </div>
     </PageWrapper>
   );
 };
