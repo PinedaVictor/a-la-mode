@@ -25,7 +25,9 @@ const imgData = [
   },
   {
     imgSrc: img10,
-    altText: ""
+    altText: "Tunnel Vision Art piece print",
+    etsyLink:
+      "https://www.etsy.com/listing/4565129022/tunnel-vision-poster-glitch-art-skate"
   },
   {
     imgSrc: img5,
@@ -50,7 +52,12 @@ export const ImageGrid: React.FC = () => {
     <>
       <section className=" grid grid-cols-2 md:grid-cols-4 w-screen bg-satBlack">
         {imgData.map((item, index) => (
-          <ArtPiece key={index} imageURL={item.imgSrc} altText={item.altText} />
+          <ArtPiece
+            key={index}
+            imageURL={item.imgSrc}
+            altText={item.altText}
+            etsyLink={item.etsyLink}
+          />
         ))}
       </section>
     </>

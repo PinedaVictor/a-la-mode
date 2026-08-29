@@ -39,7 +39,7 @@ const images = [
 
 export const SplitImageCarousel: FC = () => {
   const [index, setIndex] = useState(0);
-  const [liked, setLiked] = useState(false);
+  const [likedIndices, setLikedIndices] = useState<Set<number>>(new Set());
   const [, setFullScreen, , setFullScreenImgURL] = useContext(ImageContext);
 
   const next = () => setIndex((prev) => (prev + 1) % images.length);
@@ -70,11 +70,20 @@ export const SplitImageCarousel: FC = () => {
   });
 
   const current = images[index];
+  const liked = likedIndices.has(index);
 
   const handleLike = () => {
-    const nextLiked = !liked;
-    setLiked(nextLiked);
-    if (nextLiked) {
+    const nowLiked = !liked;
+    setLikedIndices((prev) => {
+      const next = new Set(prev);
+      if (nowLiked) {
+        next.add(index);
+      } else {
+        next.delete(index);
+      }
+      return next;
+    });
+    if (nowLiked) {
       logEvent(getAnalytics(getApp()), "select_content", {
         content_type: "hero-image-like",
         content_id: current.text

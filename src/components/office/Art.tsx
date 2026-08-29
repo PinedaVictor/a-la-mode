@@ -1,42 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { ArtPiece } from "../elements";
 import { useTransition, animated } from "@react-spring/web";
-import img from "../../assets/images/Art/TV.webp";
-import dope from "../../assets/images/Art/dopamine3.webp";
-import circle from "../../assets/images/Art/test2.webp";
-import vic from "../../assets/images/Art/vic.webp";
-import andres from "../../assets/images/Art/andres.webp";
-import fourtwo from "../../assets/images/Art/42.webp";
-import building from "../../assets/images/Art/building.webp";
+import banGioc from "../../assets/images/buy-on-etsy/ban-gioc-waterfall-cao-bang.webp";
+import tunnelVisionEtsy from "../../assets/images/buy-on-etsy/tunnel_vision.webp";
+import chevre from "../../assets/images/buy-on-etsy/chevreArtPostorDisplay.webp";
 
 const Arts = [
   {
-    imgURL: img,
-    altText: "Tunnel Vision Art piece",
+    imgURL: banGioc,
+    altText: "Ban Gioc Waterfall, Cao Bang, Vietnam Art piece",
+    etsyLink:
+      "https://www.etsy.com/listing/4565017437/ban-gioc-waterfall-travel-poster-cao",
   },
   {
-    imgURL: andres,
-    altText: "Victor Andres Art piece",
+    imgURL: tunnelVisionEtsy,
+    altText: "Tunnel Vision Art piece print",
+    etsyLink:
+      "https://www.etsy.com/listing/4565129022/tunnel-vision-poster-glitch-art-skate",
   },
   {
-    imgURL: dope,
-    altText: "Colorfull Dopamine Art piece",
-  },
-  {
-    imgURL: vic,
-    altText: "Victor Pineda Vector",
-  },
-  {
-    imgURL: building,
-    altText: "Building NFT",
-  },
-  {
-    imgURL: circle,
-    altText: "Energy Art piece",
-  },
-  {
-    imgURL: fourtwo,
-    altText: "Fourty Two Art piece",
+    imgURL: chevre,
+    altText: "Chevre Art piece print",
+    etsyLink:
+      "https://www.etsy.com/listing/4511336675/colombian-spanish-slang-chevre-wall-art",
   },
 ];
 
@@ -83,26 +69,25 @@ export const Art: React.FC = () => {
           Original Art
         </p>
       </div>
-      <div>
+      <div className="relative rounded-b-3xl overflow-hidden">
         {/* FIXME: Absolute display causes News section to overlay */}
         {transitions((styles, item) => (
           <animated.div style={styles}>
             <ArtPiece
               imageURL={Arts[item].imgURL}
               altText={Arts[imgCount].altText}
+              etsyLink={Arts[item].etsyLink}
+              aspectClassName="aspect-[4/5]"
             />
           </animated.div>
         ))}
-        {/* <ArtPiece
-          imageURL={Arts[imgCount].imgURL}
-          altText={Arts[imgCount].altText}
-        /> */}
-      </div>
-      <div
-        className=" h-10 bg-satBlack w-1/2 float-right rounded-b-3xl mt-4 "
-        onClick={() => cycleArray()}
-      >
-        <p className=" text-offWhite font-TY mt-2 ml-3">Next</p>
+        <button
+          onClick={() => cycleArray()}
+          aria-label="Next art piece"
+          className="absolute bottom-16 right-3 z-10 h-10 w-10 rounded-full border-2 border-offWhite text-offWhite text-2xl font-SFM bg-satBlack/60 flex items-center justify-center"
+        >
+          <p className="mb-1">{">"}</p>
+        </button>
       </div>
     </>
   );
