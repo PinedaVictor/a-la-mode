@@ -13,9 +13,9 @@ import {
   ImageProvider
 } from "../components/elements";
 import { NFTLAB } from "../components/office";
-// import { NewsletterEmbed } from "../components/atomic/molecules/NewsletterEmbed";
+import { NewsletterEmbed } from "../components/atomic/molecules/NewsletterEmbed";
 import { Announcements } from "../components/atomic/organisms/Announcements";
-import notFinishedGif from "../assets/images/gyfys/giphy.webp";
+// import notFinishedGif from "../assets/images/gyfys/giphy.webp";
 
 export const Home: React.FC = () => {
   return (
@@ -53,17 +53,17 @@ export const Home: React.FC = () => {
         <NFTLAB />
         {/* TODO: Find a place for the News section */}
         {/* <News /> */}
-        {/* <div className="mx-auto w-full max-w-lg">
+        <div className="mx-auto w-full max-w-lg">
           <NewsletterEmbed />
-        </div> */}
-        <div className="mx-auto w-full max-w-lg pt-10 pb-10 text-center">
+        </div>
+        {/* <div className="mx-auto w-full max-w-lg pt-10 pb-10 text-center">
           <p className="font-BN text-3xl mb-4">Newsletter:</p>
           <img
             src={notFinishedGif}
             alt="We're not finished yet"
             className="mx-auto rounded-md w-48"
           />
-        </div>
+        </div> */}
         <div className=" h-16 bg-offWhite" />
         <Footer />
         <div className=" h-16 bg-offWhite" />
