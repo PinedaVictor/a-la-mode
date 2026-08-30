@@ -4,6 +4,7 @@ import { useTransition, animated } from "@react-spring/web";
 import banGioc from "../../assets/images/buy-on-etsy/ban-gioc-waterfall-cao-bang.webp";
 import tunnelVisionEtsy from "../../assets/images/buy-on-etsy/tunnel_vision.webp";
 import chevre from "../../assets/images/buy-on-etsy/chevreArtPostorDisplay.webp";
+import momsNeedCoffee from "../../assets/images/buy-on-etsy/moms-need-coffee.webp";
 
 const Arts = [
   {
@@ -23,6 +24,12 @@ const Arts = [
     altText: "Chevre Art piece print",
     etsyLink:
       "https://www.etsy.com/listing/4511336675/colombian-spanish-slang-chevre-wall-art",
+  },
+  {
+    imgURL: momsNeedCoffee,
+    altText: "Moms Need Coffee Art piece print",
+    etsyLink:
+      "https://dreamlikedigitalco.etsy.com/listing/4565248233/coffee-lover-gift-for-mom-funny-kitchen",
   },
 ];
 
