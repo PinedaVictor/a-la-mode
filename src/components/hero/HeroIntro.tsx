@@ -54,7 +54,11 @@ export const HeroIntro: FC = () => {
       style={boxLeaving}
       className="fixed top-0 left-0 z-50 pointer-events-none"
     >
-      <div className="pointer-events-auto inline-block bg-yellow font-BR text-offBlack text-5xl min-[393px]:text-6xl md:text-7xl lg:text-8xl px-3 py-2">
+      <div
+        className={`inline-block bg-yellow font-BR text-offBlack text-5xl min-[393px]:text-6xl md:text-7xl lg:text-8xl px-3 py-2 ${
+          scrolled ? "pointer-events-none" : "pointer-events-auto"
+        }`}
+      >
         <animated.div
           style={{ ...trail[0], ...nameLeaving }}
           className="overflow-hidden"
