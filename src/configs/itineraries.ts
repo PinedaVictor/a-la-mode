@@ -103,5 +103,18 @@ export const itinerariesConfig: DownloadableItinerary[] = [
         storagePath: "itineraries/3 Day Iraq Trip.pdf"
       }
     ]
+  },
+  {
+    title: "7 Days in Japan highlights",
+    slug: "7-days-in-japan-highlights",
+    description:
+      " My top must-see highlights from my 7 days in Japan trip. If you have a longer time in Japan, you can knock these out in a shorter time. ",
+    tags: ["Japan"],
+    assets: [
+      {
+        label: "Download PDF",
+        storagePath: "itineraries/7 Days in Japan.pdf"
+      }
+    ]
   }
 ];
