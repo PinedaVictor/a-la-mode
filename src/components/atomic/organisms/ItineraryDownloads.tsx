@@ -9,7 +9,7 @@ type Props = {
   itineraries: DownloadableItinerary[];
   unlocked: boolean;
 };
-
+//  No AI here—every guide comes from a trip I've actually taken, built from scratch with real routes and actual cost breakdowns. Sign in with Google below to unlock instant access.
 export const ItineraryDownloads: FC<Props> = (props) => {
   if (!props.unlocked) {
     return (
@@ -17,9 +17,14 @@ export const ItineraryDownloads: FC<Props> = (props) => {
         <div className="w-full max-w-[400px] mx-auto mb-7">
           <Trails>
             <div>
-              <Comment comment="Hi, thanks for stopping by! No AI here—every guide comes from a trip I've actually taken, built from scratch with real routes and actual cost breakdowns. Sign in with Google below to unlock instant access." />
+              <Comment comment="Welcome friend!" />
             </div>
           </Trails>
+        </div>
+        <div className="w-full max-w-[400px] mx-auto mb-7 text-center">
+          <p className="font-SFR">
+            Travel Guides | Trip Highlights | Cost Breakdown
+          </p>
         </div>
         <SignIn
           withSignUp
@@ -32,7 +37,7 @@ export const ItineraryDownloads: FC<Props> = (props) => {
   }
 
   return (
-    <section className="grid md:grid-cols-2 lg:grid-cols-3">
+    <section className="columns-1 md:columns-2 lg:columns-3">
       {props.itineraries.map((item) => (
         <ItineraryCard key={item.slug} {...item} />
       ))}

@@ -54,7 +54,7 @@ export const ItineraryCard: FC<DownloadableItinerary> = (props) => {
   };
 
   return (
-    <LeftRightSpring left={false} height={250}>
+    <LeftRightSpring left={false} height={250} className="break-inside-avoid">
       <div className=" p-7">
         <div className=" border-2 p-3 rounded-md border-grey">
           <div className="rounded-t-lg flex flex-row justify-between items-center">

@@ -8,7 +8,7 @@ type Props = {
 
 export const Projects: FC<Props> = (props) => {
   return (
-    <section className="grid md:grid-cols-2 lg:grid-cols-3">
+    <section className="columns-1 md:columns-2 lg:columns-3">
       {props.projects.map((item, index) => (
         <TerminalCard
           key={index}

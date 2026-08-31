@@ -31,7 +31,7 @@ export const TerminalCard: FC<Project> = (props) => {
   }
 
   return (
-    <LeftRightSpring left={false} height={250}>
+    <LeftRightSpring left={false} height={250} className="break-inside-avoid">
       <div className="p-7">
         <div className="relative">
           <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-3xl bg-yellow" />

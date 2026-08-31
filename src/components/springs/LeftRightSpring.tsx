@@ -6,6 +6,7 @@ interface LeftRightSpringProps {
   left: boolean;
   height: number;
   children: React.ReactNode;
+  className?: string;
 }
 
 export const LeftRightSpring: React.FC<LeftRightSpringProps> = (props) => {
@@ -25,7 +26,7 @@ export const LeftRightSpring: React.FC<LeftRightSpringProps> = (props) => {
   });
   return (
     <>
-      <div>
+      <div className={props.className}>
         {trails.map((props, index) => (
           <animated.div style={props} key={index}>
             {items[index]}
