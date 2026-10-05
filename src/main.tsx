@@ -18,13 +18,20 @@ declare module "@tanstack/react-router" {
   }
 }
 
-// Render the app
+// Render the app. #root may already hold prerendered HTML (scripts/prerender.mjs);
+// load the matched route's lazy chunk first so React swaps that markup for the
+// live app in one commit instead of flashing an empty page. Render even if the
+// preload fails (e.g. a chunk from a stale deploy), so the page never stays
+// stuck as a non-interactive snapshot; the router shows its own error state.
 const rootElement = document.getElementById("root")!;
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <StrictMode>
-      <RouterProvider router={router} />
-    </StrictMode>
-  );
-}
+router
+  .load()
+  .catch((error) => console.error("Route preload failed:", error))
+  .finally(() => {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(
+      <StrictMode>
+        <RouterProvider router={router} />
+      </StrictMode>
+    );
+  });

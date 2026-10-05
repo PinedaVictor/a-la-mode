@@ -42,6 +42,11 @@ export type DownloadableItinerary = {
   relatedVideoId?: string;
   costBreakdown?: CostItem[];
   assets: ItineraryAsset[];
+  // Public teaser fields, shown to signed-out visitors (and Google):
+  // one headline number, e.g. "~$45/day" or "3 days ≈ $1,250 all-in".
+  costHeadline?: string;
+  // Extra "what's inside" bullets, e.g. "Local guide contacts".
+  highlights?: string[];
 };
 
 export type Announcement = {

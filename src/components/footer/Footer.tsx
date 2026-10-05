@@ -1,7 +1,15 @@
 import React from "react";
 import { FooterSection } from "./FooterSection";
 import { Link } from "@tanstack/react-router";
+import { getApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
 import { ExternalLink } from "../atomic/atoms";
+
+const STUDIO_URL =
+  "https://dreamlikedigital.com/?utm_source=pinedavictor.com&utm_medium=referral&utm_campaign=footer";
+
+const logStudioClick = () =>
+  logEvent(getAnalytics(getApp()), "studio_click", { link_location: "footer" });
 
 export const Footer: React.FC = () => {
   return (
@@ -11,6 +19,9 @@ export const Footer: React.FC = () => {
           <div className="pt-10">
             <p className="underline font-BN text-2xl whitespace-nowrap">Connect</p>
             <ul className="leading-loose">
+              <ExternalLink link={STUDIO_URL} onClick={logStudioClick}>
+                <li className="whitespace-nowrap">Dreamlike Digital</li>
+              </ExternalLink>
               <ExternalLink link="https://www.linkedin.com/in/pinedavictor095/">
                 <li>LinkedIn</li>
               </ExternalLink>
