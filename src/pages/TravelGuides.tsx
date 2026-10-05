@@ -27,11 +27,9 @@ const TravelGuidesContent: FC = () => {
     }
   }, [isSignedIn]);
 
-  if (!isLoaded) {
-    return <PageWrapper>{null}</PageWrapper>;
-  }
-
-  if (!unlocked) {
+  // Show the public (locked) view while Clerk loads, so crawlers, the
+  // prerenderer, and visitors who block Clerk never get an empty page.
+  if (!isLoaded || !unlocked) {
     return (
       <PageWrapper>
         <ItineraryDownloads itineraries={itinerariesConfig} unlocked={false} />

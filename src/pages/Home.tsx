@@ -1,5 +1,4 @@
 import React from "react";
-import { Footer } from "../components";
 import { SplitImageCarousel } from "../components/elements/pixels/SplitImageCarousel";
 import { HeroIntro } from "../components/hero/HeroIntro";
 import { ExternalLink } from "../components/atomic/atoms";
@@ -64,12 +63,6 @@ export const Home: React.FC = () => {
             className="mx-auto rounded-md w-48"
           />
         </div> */}
-        <div className=" h-16 bg-offWhite" />
-        <Footer />
-        <div className=" h-16 bg-offWhite" />
-        <div className=" text-sm font-BN bg-orange text-center text-offWhite ">
-          &copy; Dreamlike Digital. All Rights Reserved
-        </div>
       </PageWrapper>
     </ImageProvider>
   );

@@ -7,6 +7,7 @@ import { ArrowUpCircleIcon } from "@heroicons/react/20/solid";
 import { validateContactForm, FormData } from "../../utils/validateContactForm";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 export const ContactForm: React.FC = () => {
   const [errMsg, setErrMsg] = useState("");
@@ -95,6 +96,10 @@ export const ContactForm: React.FC = () => {
         },
         { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       );
+      // Primary conversion: only counted once EmailJS confirms the send.
+      logEvent(getAnalytics(getApp()), "generate_lead", {
+        form_location: window.location.pathname
+      });
     } catch (error) {
       console.log("Error sending email via EmailJS:", error);
     }

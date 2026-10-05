@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
+import { initializeAnalytics } from "firebase/analytics";
 // import dotenv from "dotenv";
 // dotenv.config();
 // TODO: Add SDKs for Firebase products that you want to use
@@ -20,5 +21,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// index.html's gtag snippet already sends the page_view for this same
+// measurement ID. Without send_page_view: false, the first logEvent call
+// (getAnalytics) re-runs gtag config and counts the page a second time.
+initializeAnalytics(app, { config: { send_page_view: false } });
 
 export const storage = getStorage(app);
